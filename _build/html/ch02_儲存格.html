@@ -1,0 +1,1560 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ch02 儲存格 &#8212; My sample book</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Ch03 資料操作" href="ch03_%E8%B3%87%E6%96%99%E6%93%8D%E4%BD%9C.html" />
+    <link rel="prev" title="Ch01 基本" href="ch01_%E5%9F%BA%E6%9C%AC.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">My sample book</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch01_%E5%9F%BA%E6%9C%AC.html">
+   Ch01 基本
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Ch02 儲存格
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch03_%E8%B3%87%E6%96%99%E6%93%8D%E4%BD%9C.html">
+   Ch03 資料操作
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch04_%E5%B7%A5%E4%BD%9C%E8%A1%A8.html">
+   Ch04 工作表
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch05_%E6%B4%BB%E9%A0%81%E7%B0%BF.html">
+   Ch05 活頁簿
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch06_%E6%AA%94%E6%A1%88.html">
+   Ch06 檔案
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch07_%E8%A6%96%E7%AA%97.html">
+   Ch07 視窗
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch08_%E5%88%97%E5%8D%B0.html">
+   Ch08 列印
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch09_%E7%9B%AE%E6%9C%9F%E6%99%82%E9%96%93%E5%87%BD%E6%95%B8.html">
+   Ch09 日期時間函數
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch10_%E6%96%87%E5%AD%97%E6%93%8D%E4%BD%9C%E5%87%BD%E6%95%B8.html">
+   Ch10 文字操作函數
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch11_%E5%85%B6%E4%BB%96%E5%87%BD%E6%95%B8.html">
+   Ch11 其他函數
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch12_%E5%9C%96%E8%A1%A8%E5%9C%96%E6%A1%88.html">
+   Ch12 圖表、圖案
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch13_%E4%BD%BF%E7%94%A8%E8%80%85%E8%A1%A8%E5%96%AE.html">
+   Ch13 使用者表單
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch14_%E5%A4%96%E9%83%A8%E8%B3%87%E6%96%99%E6%93%8D%E4%BD%9C%E8%88%87%E5%85%B6%E4%BB%96.html">
+   Ch14 外部資料操作與其他
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/ch02_儲存格.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fch02_儲存格.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   047 參照儲存格
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   048 參照單一儲存格或所有儲存格
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   049 參照作用儲存格
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   050 選擇儲存格
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   051 以相對位移參照儲存格
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   052 參照已鍵入資料區域的終端儲存格
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   053 選取表格的全部區域
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id8">
+   054 變更儲存格範圍
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id9">
+   055 結合多個儲存格範圍
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id10">
+   056 取得選取範圍的位置
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id11">
+   057 取得所選擇儲存格的列和欄的編號
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id12">
+   058 參照列和欄
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id13">
+   059 參照儲存格範圍的整列和整欄
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id14">
+   060 儲存格範圍的列數和欄數
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id15">
+   061 為儲存格範圍的名稱
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id16">
+   062 刪除儲存格範圍的名稱
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id17">
+   063 取得特定種類的儲存格
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id18">
+   064 跳到指定的儲存格
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id19">
+   065 參照到目前使用的字型
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id20">
+   066 改變字型的大小和種類
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id21">
+   067 塗滿儲存格
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id22">
+   068 變更字型樣式
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id23">
+   069 設定顏色的濃淡
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id24">
+   070 設定儲存格的網底圖樣
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id25">
+   071 設定儲存格的線性漸層顏色
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id26">
+   072 繪製儲存格框線
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id27">
+   073 指定框線種類
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id28">
+   074
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id29">
+   075 登錄使用者定義的儲存格樣式
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id30">
+   076 設定儲存格的格式
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id31">
+   077 刪除儲存格的值或格式
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id32">
+   078 依欄寬自動換列
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id33">
+   079 參照合併儲存格
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id34">
+   080 合併儲存格
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id35">
+   081 設定條件化格式
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id36">
+   082 確認是否為合併的儲存格
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id37">
+   083 設定超連結
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id38">
+   084 插入註解
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id39">
+   085 將列或欄隱藏
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id40">
+   086 設定或取得儲存格的值
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id41">
+   087 取得在儲存格上顯示的值
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id42">
+   088 設定或取得儲存格的公式
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id43">
+   089 取得儲存格的高度和寬度
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id44">
+   090 變更列高和欄寬
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id45">
+   091 恢復為標準列高和欄寬
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id46">
+   092 自動調整列高欄寬
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id47">
+   093 變更儲存格的文字對齊方式
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id48">
+   094 新增儲存格
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id49">
+   095 刪除儲存格
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id50">
+   096 將儲存格的值複製到其他儲存格
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id51">
+   097 不經過剪貼簿直接複製並貼上
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id52">
+   098 選擇格式後貼上
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="ch02">
+<h1>Ch02 儲存格<a class="headerlink" href="#ch02" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>047 參照儲存格<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">參照儲存格範圍</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3&quot;</span><span class="p">,</span> <span class="s2">&quot;G7&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Font</span><span class="o">.</span><span class="n">Italic</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3:G7&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">HorizontalAlignment</span> <span class="o">=</span> <span class="n">xlCenter</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;表&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Borders</span><span class="o">.</span><span class="n">LineStyle</span> <span class="o">=</span> <span class="n">xlContinuous</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Font</span><span class="o">.</span><span class="n">Bold</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3:G3,A7&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Style</span> <span class="o">=</span> <span class="s2">&quot;好&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>048 參照單一儲存格或所有儲存格<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">參照儲存格</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span>
+    <span class="n">Cells</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">Date</span>
+    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span> <span class="n">To</span> <span class="mi">6</span>
+        <span class="n">If</span> <span class="n">Cells</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">&gt;=</span> <span class="n">Cells</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="s2">&quot;G&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="n">Then</span>
+           <span class="n">Cells</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="mi">3</span>
+        <span class="n">End</span> <span class="n">If</span>
+    <span class="n">Next</span> <span class="n">i</span>
+    <span class="n">Cells</span><span class="o">.</span><span class="n">Font</span><span class="o">.</span><span class="n">Size</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>049 參照作用儲存格<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module3&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">作用儲存格</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Select</span>
+    <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">Shapes</span><span class="p">(</span><span class="s2">&quot;Picture 1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Select</span>
+    <span class="n">MsgBox</span> <span class="s2">&quot;作用儲存格: &quot;</span> <span class="o">&amp;</span> <span class="n">ActiveCell</span><span class="o">.</span><span class="n">Address</span> <span class="n">_</span>
+    <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">&amp;</span> <span class="s2">&quot;選擇: &quot;</span> <span class="o">&amp;</span> <span class="n">TypeName</span><span class="p">(</span><span class="n">Selection</span><span class="p">)</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>050 選擇儲存格<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">選擇儲存格</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3:B11&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Select</span>
+    <span class="n">Selection</span><span class="o">.</span><span class="n">Borders</span><span class="o">.</span><span class="n">LineStyle</span> <span class="o">=</span> <span class="n">xlContinuous</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B11&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Activate</span>
+    <span class="n">ActiveCell</span><span class="o">.</span><span class="n">Formula</span> <span class="o">=</span> <span class="s2">&quot;=SUM(B4:B10)&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>051 以相對位移參照儲存格<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module3&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">相對儲存格</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Offset</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">Select</span>
+    <span class="n">Selection</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;合計&quot;</span>
+    <span class="n">Selection</span><span class="o">.</span><span class="n">Offset</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Formula</span> <span class="o">=</span> <span class="s2">&quot;=SUM(B4:B9)&quot;</span>
+    <span class="n">Selection</span><span class="o">.</span><span class="n">Offset</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">Formula</span> <span class="o">=</span> <span class="s2">&quot;=B10/E1&quot;</span>
+    <span class="n">Range</span><span class="p">(</span><span class="n">Selection</span><span class="p">,</span> <span class="n">Selection</span><span class="o">.</span><span class="n">Offset</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span><span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="mi">36</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>052 參照已鍵入資料區域的終端儲存格<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">取得終端儲存格</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">sRange</span> <span class="n">As</span> <span class="n">Range</span><span class="p">,</span> <span class="n">eRange</span> <span class="n">As</span> <span class="n">Range</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span>
+    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">3</span> <span class="n">To</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A2&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">End</span><span class="p">(</span><span class="n">xlDown</span><span class="p">)</span><span class="o">.</span><span class="n">Row</span>
+        <span class="n">Set</span> <span class="n">sRange</span> <span class="o">=</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">Set</span> <span class="n">eRange</span> <span class="o">=</span> <span class="n">sRange</span><span class="o">.</span><span class="n">End</span><span class="p">(</span><span class="n">xlToRight</span><span class="p">)</span>
+        <span class="n">If</span> <span class="n">i</span> <span class="n">Mod</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">Then</span>
+           <span class="n">Range</span><span class="p">(</span><span class="n">sRange</span><span class="p">,</span> <span class="n">eRange</span><span class="p">)</span><span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="mi">34</span>
+        <span class="n">End</span> <span class="n">If</span>
+    <span class="n">Next</span>
+    <span class="n">Set</span> <span class="n">sRange</span> <span class="o">=</span> <span class="n">Nothing</span>
+    <span class="n">Set</span> <span class="n">eRange</span> <span class="o">=</span> <span class="n">Nothing</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>053 選取表格的全部區域<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">做成表格</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">End</span><span class="p">(</span><span class="n">xlDown</span><span class="p">)</span><span class="o">.</span><span class="n">Select</span>
+    <span class="n">ActiveCell</span><span class="o">.</span><span class="n">CurrentRegion</span><span class="o">.</span><span class="n">Borders</span><span class="o">.</span><span class="n">LineStyle</span> <span class="o">=</span> <span class="n">xlContinuous</span>
+    <span class="n">ActiveCell</span><span class="o">.</span><span class="n">End</span><span class="p">(</span><span class="n">xlDown</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span><span class="o">.</span><span class="n">Borders</span><span class="o">.</span><span class="n">LineStyle</span> <span class="o">=</span> <span class="n">xlContinuous</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>054 變更儲存格範圍<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">變更儲存格範圍</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myRange</span> <span class="n">As</span> <span class="n">Range</span>
+    <span class="n">Dim</span> <span class="n">myRow</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">myCol</span> <span class="n">As</span> <span class="n">Integer</span>
+    
+    <span class="n">Set</span> <span class="n">myRange</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span>
+    <span class="n">myRow</span> <span class="o">=</span> <span class="n">myRange</span><span class="o">.</span><span class="n">Rows</span><span class="o">.</span><span class="n">Count</span>
+    <span class="n">myCol</span> <span class="o">=</span> <span class="n">myRange</span><span class="o">.</span><span class="n">Columns</span><span class="o">.</span><span class="n">Count</span>
+    <span class="n">Set</span> <span class="n">myRange</span> <span class="o">=</span> <span class="n">myRange</span><span class="o">.</span><span class="n">Resize</span><span class="p">(</span><span class="n">myRow</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">myCol</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    
+    <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">Shapes</span><span class="o">.</span><span class="n">AddChart</span><span class="p">(</span><span class="n">xlPie</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span><span class="o">.</span><span class="n">Select</span>
+    <span class="n">ActiveChart</span><span class="o">.</span><span class="n">SetSourceData</span> <span class="n">Source</span><span class="o">:=</span><span class="n">myRange</span>
+    <span class="n">Set</span> <span class="n">myRange</span> <span class="o">=</span> <span class="n">Nothing</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>055 結合多個儲存格範圍<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module2&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">結合儲存格範圍</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">Range1</span> <span class="n">As</span> <span class="n">Range</span><span class="p">,</span> <span class="n">Range2</span> <span class="n">As</span> <span class="n">Range</span>
+    <span class="n">Dim</span> <span class="n">Range3</span> <span class="n">As</span> <span class="n">Range</span><span class="p">,</span> <span class="n">allRange</span> <span class="n">As</span> <span class="n">Range</span>
+    
+    <span class="n">Set</span> <span class="n">Range1</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span>
+    <span class="n">Set</span> <span class="n">Range2</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A8&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span>
+    <span class="n">Set</span> <span class="n">Range3</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A13&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span>
+    <span class="n">Set</span> <span class="n">allRange</span> <span class="o">=</span> <span class="n">Union</span><span class="p">(</span><span class="n">Range1</span><span class="p">,</span> <span class="n">Range2</span><span class="p">,</span> <span class="n">Range3</span><span class="p">)</span>
+    
+    <span class="n">allRange</span><span class="o">.</span><span class="n">SpecialCells</span><span class="p">(</span><span class="n">xlCellTypeFormulas</span><span class="p">)</span><span class="o">.</span> <span class="n">_</span>
+                <span class="n">Interior</span><span class="o">.</span><span class="n">Color</span> <span class="o">=</span> <span class="n">RGB</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">Set</span> <span class="n">Range1</span> <span class="o">=</span> <span class="n">Nothing</span><span class="p">:</span> <span class="n">Set</span> <span class="n">Range2</span> <span class="o">=</span> <span class="n">Nothing</span>
+    <span class="n">Set</span> <span class="n">Range3</span> <span class="o">=</span> <span class="n">Nothing</span><span class="p">:</span> <span class="n">Set</span> <span class="n">Range1</span> <span class="o">=</span> <span class="n">Nothing</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>056 取得選取範圍的位置<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">取得位址</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myRange</span> <span class="n">As</span> <span class="n">Range</span>
+    <span class="n">Set</span> <span class="n">myRange</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span>
+    <span class="n">MsgBox</span> <span class="s2">&quot;儲存格A3的目前區域作用領域: &quot;</span> <span class="o">&amp;</span> <span class="n">myRange</span><span class="o">.</span><span class="n">Address</span><span class="p">(</span><span class="n">RowAbsolute</span><span class="o">:=</span><span class="kc">False</span><span class="p">,</span> <span class="n">_</span>
+            <span class="n">ColumnAbsolute</span><span class="o">:=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ReferenceStyle</span><span class="o">:=</span><span class="n">xlA1</span><span class="p">,</span> <span class="n">External</span><span class="o">:=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">Set</span> <span class="n">myRange</span> <span class="o">=</span> <span class="n">Nothing</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>057 取得所選擇儲存格的列和欄的編號<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">取得列欄編號</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myRow</span> <span class="n">As</span> <span class="n">Long</span><span class="p">,</span> <span class="n">myColumn</span> <span class="n">As</span> <span class="n">Long</span>
+    <span class="n">Dim</span> <span class="n">myRange</span> <span class="n">As</span> <span class="n">Range</span><span class="p">,</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span>
+    
+    <span class="n">myRow</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">End</span><span class="p">(</span><span class="n">xlDown</span><span class="p">)</span><span class="o">.</span><span class="n">Row</span>
+    <span class="n">myColumn</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">End</span><span class="p">(</span><span class="n">xlToRight</span><span class="p">)</span><span class="o">.</span><span class="n">Column</span>
+    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">4</span> <span class="n">To</span> <span class="n">myRow</span>
+        <span class="n">Set</span> <span class="n">myRange</span> <span class="o">=</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">myColumn</span><span class="p">)</span>
+        <span class="n">If</span> <span class="n">myRange</span><span class="o">.</span><span class="n">Value</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="n">Then</span>
+           <span class="n">myRange</span><span class="o">.</span><span class="n">Style</span> <span class="o">=</span> <span class="s2">&quot;壞&quot;</span>
+        <span class="n">End</span> <span class="n">If</span>
+    <span class="n">Next</span> <span class="n">i</span>
+    <span class="n">Set</span> <span class="n">myRange</span> <span class="o">=</span> <span class="n">Nothing</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>058 參照列和欄<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">列欄編號</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">allRange</span> <span class="n">As</span> <span class="n">Range</span>
+    <span class="n">Set</span> <span class="n">allRange</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span>
+    
+    <span class="n">allRange</span><span class="o">.</span><span class="n">Columns</span><span class="p">(</span><span class="s2">&quot;A:B&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">HorizontalAlignment</span> <span class="o">=</span> <span class="n">xlCenter</span>
+    <span class="n">allRange</span><span class="o">.</span><span class="n">Rows</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Select</span>
+    <span class="n">Selection</span><span class="o">.</span><span class="n">HorizontalAlignment</span> <span class="o">=</span> <span class="n">xlCenter</span>
+    <span class="n">Selection</span><span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="mi">38</span>
+    <span class="n">Set</span> <span class="n">allRange</span> <span class="o">=</span> <span class="n">Nothing</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">日期格式</span><span class="p">()</span>
+    <span class="n">Cells</span><span class="o">.</span><span class="n">ClearFormats</span>
+    <span class="n">Columns</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">NumberFormatLocal</span> <span class="o">=</span> <span class="s2">&quot;yyyy/mm/dd&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>059 參照儲存格範圍的整列和整欄<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">插入整個列</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">rcnt</span> <span class="n">As</span> <span class="n">Integer</span>
+    
+    <span class="n">rcnt</span> <span class="o">=</span> <span class="n">Cells</span><span class="p">(</span><span class="n">Rows</span><span class="o">.</span><span class="n">Count</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">End</span><span class="p">(</span><span class="n">xlUp</span><span class="p">)</span><span class="o">.</span><span class="n">Row</span>
+    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="n">rcnt</span> <span class="n">To</span> <span class="mi">3</span> <span class="n">Step</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="n">If</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="n">Like</span> <span class="s2">&quot;*部&quot;</span> <span class="n">Then</span>
+           <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">EntireRow</span><span class="o">.</span><span class="n">Insert</span>
+           <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">EntireRow</span><span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">End</span> <span class="n">If</span>
+    <span class="n">Next</span> <span class="n">i</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>060 儲存格範圍的列數和欄數<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">取得列數和欄數</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">rcnt</span> <span class="n">As</span> <span class="n">Long</span><span class="p">,</span> <span class="n">ccnt</span> <span class="n">As</span> <span class="n">Long</span>
+    
+    <span class="n">rcnt</span> <span class="o">=</span> <span class="n">Rows</span><span class="o">.</span><span class="n">Count</span>
+    <span class="n">ccnt</span> <span class="o">=</span> <span class="n">Columns</span><span class="o">.</span><span class="n">Count</span>
+    <span class="n">MsgBox</span> <span class="s2">&quot;工作表的列數: &quot;</span> <span class="o">&amp;</span> <span class="n">rcnt</span> <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">_</span>
+           <span class="s2">&quot;工作表的欄數: &quot;</span> <span class="o">&amp;</span> <span class="n">ccnt</span>
+    <span class="n">rcnt</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3:C10&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Rows</span><span class="o">.</span><span class="n">Count</span>
+    <span class="n">ccnt</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3:C10&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Columns</span><span class="o">.</span><span class="n">Count</span>
+    <span class="n">MsgBox</span> <span class="s2">&quot;表的列數: &quot;</span> <span class="o">&amp;</span> <span class="n">rcnt</span> <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">_</span>
+           <span class="s2">&quot;表的欄數: &quot;</span> <span class="o">&amp;</span> <span class="n">ccnt</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id15">
+<h2>061 為儲存格範圍的名稱<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">定義名稱</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A2&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span><span class="o">.</span><span class="n">Name</span> <span class="o">=</span> <span class="s2">&quot;年間目標&quot;</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;年間目標&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Select</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">定義名稱2</span><span class="p">()</span>
+    <span class="n">ActiveWorkbook</span><span class="o">.</span><span class="n">Names</span><span class="o">.</span><span class="n">Add</span> <span class="n">Name</span><span class="o">:=</span><span class="s2">&quot;年間目標&quot;</span><span class="p">,</span> <span class="n">RefersTo</span><span class="o">:=</span><span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A2&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;年間目標&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Select</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id16">
+<h2>062 刪除儲存格範圍的名稱<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module2&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">刪除名稱</span><span class="p">()</span>
+    <span class="n">On</span> <span class="n">Error</span> <span class="n">GoTo</span> <span class="n">errHandler</span>
+    <span class="n">ActiveWorkbook</span><span class="o">.</span><span class="n">Names</span><span class="p">(</span><span class="s2">&quot;年間目標&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Delete</span>
+    <span class="n">Exit</span> <span class="n">Sub</span>
+<span class="n">errHandler</span><span class="p">:</span>
+    <span class="n">MsgBox</span> <span class="s2">&quot;沒有名稱!!&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">刪除全部名稱</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">xName</span> <span class="n">As</span> <span class="n">Name</span>
+    <span class="n">For</span> <span class="n">Each</span> <span class="n">xName</span> <span class="n">In</span> <span class="n">ActiveWorkbook</span><span class="o">.</span><span class="n">Names</span>
+        <span class="n">xName</span><span class="o">.</span><span class="n">Delete</span>
+    <span class="n">Next</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id17">
+<h2>063 取得特定種類的儲存格<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">參照空白儲存格</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myRange</span> <span class="n">As</span> <span class="n">Range</span>
+    <span class="n">Set</span> <span class="n">myRange</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A2&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span><span class="o">.</span><span class="n">SpecialCells</span><span class="p">(</span><span class="n">xlCellTypeBlanks</span><span class="p">)</span>
+    <span class="n">myRange</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">MsgBox</span> <span class="s2">&quot;空白儲存格: &quot;</span> <span class="o">&amp;</span> <span class="n">myRange</span><span class="o">.</span><span class="n">Address</span><span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="n">xlA1</span><span class="p">)</span>
+    <span class="n">Set</span> <span class="n">myRange</span> <span class="o">=</span> <span class="n">Nothing</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">將儲存格轉為空白</span><span class="p">()</span>
+    
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A2&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span><span class="o">.</span><span class="n">Replace</span> <span class="n">_</span>
+            <span class="n">What</span><span class="o">:=</span><span class="mi">0</span><span class="p">,</span> <span class="n">Replacement</span><span class="o">:=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">Lookat</span><span class="o">:=</span><span class="n">xlWhole</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id18">
+<h2>064 跳到指定的儲存格<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module2&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">CellJump</span><span class="p">()</span>
+    <span class="n">Application</span><span class="o">.</span><span class="n">Goto</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A8:F12&quot;</span><span class="p">)</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">CellJump2</span><span class="p">()</span>
+    <span class="n">Application</span><span class="o">.</span><span class="n">Goto</span> <span class="n">Reference</span><span class="o">:=</span><span class="n">Worksheets</span><span class="p">(</span><span class="s2">&quot;5ды&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A8&quot;</span><span class="p">),</span> <span class="n">Scroll</span><span class="o">:=</span><span class="kc">True</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id19">
+<h2>065 參照到目前使用的字型<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module2&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">參照字型</span><span class="p">()</span>
+    <span class="n">With</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B1:C6&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Font</span>
+        <span class="o">.</span><span class="n">Name</span> <span class="o">=</span> <span class="s2">&quot;MS PGothic&quot;</span>
+        <span class="o">.</span><span class="n">FontStyle</span> <span class="o">=</span> <span class="s2">&quot;斜體&quot;</span>
+        <span class="o">.</span><span class="n">Size</span> <span class="o">=</span> <span class="mi">16</span>
+        <span class="o">.</span><span class="n">Color</span> <span class="o">=</span> <span class="n">RGB</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">115</span><span class="p">,</span> <span class="mi">190</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">TintAndShade</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="o">.</span><span class="n">ThemeFont</span> <span class="o">=</span> <span class="n">xlThemeFontNone</span>
+    <span class="n">End</span> <span class="n">With</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id20">
+<h2>066 改變字型的大小和種類<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module2&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">設定字型的尺寸種類</span><span class="p">()</span>
+    <span class="n">With</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Font</span>
+        <span class="o">.</span><span class="n">Name</span> <span class="o">=</span> <span class="s2">&quot;MS UI Gothic&quot;</span>
+        <span class="o">.</span><span class="n">Size</span> <span class="o">=</span> <span class="mi">18</span>
+    <span class="n">End</span> <span class="n">With</span>
+    <span class="n">With</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B3:C6&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Font</span>
+        <span class="o">.</span><span class="n">Name</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">StandardFont</span>
+        <span class="o">.</span><span class="n">Size</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">StandardFontSize</span>
+    <span class="n">End</span> <span class="n">With</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id21">
+<h2>067 塗滿儲存格<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">塗滿儲存格</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myRange</span> <span class="n">As</span> <span class="n">Range</span>
+    <span class="n">For</span> <span class="n">Each</span> <span class="n">myRange</span> <span class="n">In</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;C4:D10&quot;</span><span class="p">)</span>
+        <span class="n">If</span> <span class="n">myRange</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;陳&quot;</span> <span class="n">Then</span>
+           <span class="n">myRange</span><span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">Color</span> <span class="o">=</span> <span class="n">RGB</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+        <span class="n">End</span> <span class="n">If</span>
+    <span class="n">Next</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">設定儲存格的顏色</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;C4:D10&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Font</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="n">xlColorIndexAutomatic</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;C4:D10&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="n">xlColorIndexNone</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">設定儲存格的布景主題</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">ThemeColor</span> <span class="o">=</span> <span class="n">xlThemeColorAccent6</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id22">
+<h2>068 變更字型樣式<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">設定字型樣式</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;C1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Font</span><span class="o">.</span><span class="n">Bold</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;D2&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Font</span><span class="o">.</span><span class="n">Italic</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;C4&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Font</span><span class="o">.</span><span class="n">Underline</span> <span class="o">=</span> <span class="n">xlUnderlineStyleDoubleAccounting</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id23">
+<h2>069 設定顏色的濃淡<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">顏色濃淡</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myRange</span> <span class="n">As</span> <span class="n">Range</span><span class="p">,</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span>
+    <span class="n">Set</span> <span class="n">myRange</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A4:C10&quot;</span><span class="p">)</span>
+    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="n">To</span> <span class="n">myRange</span><span class="o">.</span><span class="n">Rows</span><span class="o">.</span><span class="n">Count</span>
+        <span class="n">myRange</span><span class="o">.</span><span class="n">Rows</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">ThemeColor</span> <span class="o">=</span> <span class="n">xlThemeColorAccent6</span>
+        <span class="n">Select</span> <span class="n">Case</span> <span class="n">myRange</span><span class="o">.</span><span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+            <span class="n">Case</span> <span class="mi">10</span><span class="p">:</span> <span class="n">myRange</span><span class="o">.</span><span class="n">Rows</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">TintAndShade</span> <span class="o">=</span> <span class="mf">0.8</span>
+            <span class="n">Case</span> <span class="mi">20</span><span class="p">:</span> <span class="n">myRange</span><span class="o">.</span><span class="n">Rows</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">TintAndShade</span> <span class="o">=</span> <span class="mf">0.6</span>
+            <span class="n">Case</span> <span class="mi">30</span><span class="p">:</span> <span class="n">myRange</span><span class="o">.</span><span class="n">Rows</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">TintAndShade</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="n">Case</span> <span class="mi">40</span><span class="p">:</span> <span class="n">myRange</span><span class="o">.</span><span class="n">Rows</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">TintAndShade</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.25</span>
+        <span class="n">End</span> <span class="n">Select</span>
+    <span class="n">Next</span> <span class="n">i</span>
+    <span class="n">Set</span> <span class="n">myRange</span> <span class="o">=</span> <span class="n">Nothing</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id24">
+<h2>070 設定儲存格的網底圖樣<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">設定網底</span><span class="p">()</span>
+    <span class="n">With</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3:G3,A7&quot;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">Pattern</span> <span class="o">=</span> <span class="n">xlPatternGray75</span>
+        <span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">PatternColor</span> <span class="o">=</span> <span class="n">RGB</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+    <span class="n">End</span> <span class="n">With</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id25">
+<h2>071 設定儲存格的線性漸層顏色<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">傾斜</span><span class="p">()</span>
+    <span class="n">With</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B4:B6&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Interior</span>
+        <span class="o">.</span><span class="n">Pattern</span> <span class="o">=</span> <span class="n">xlPatternLinearGradient</span>
+        <span class="o">.</span><span class="n">Gradient</span><span class="o">.</span><span class="n">Degree</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="o">.</span><span class="n">Gradient</span><span class="o">.</span><span class="n">ColorStops</span><span class="o">.</span><span class="n">Clear</span>
+        <span class="o">.</span><span class="n">Gradient</span><span class="o">.</span><span class="n">ColorStops</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">Color</span> <span class="o">=</span> <span class="n">RGB</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">Gradient</span><span class="o">.</span><span class="n">ColorStops</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Color</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">Color</span>
+    <span class="n">End</span> <span class="n">With</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id26">
+<h2>072 繪製儲存格框線<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">設定框線</span><span class="p">()</span>
+    <span class="n">With</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B3:C6&quot;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">Borders</span><span class="p">(</span><span class="n">xlEdgeTop</span><span class="p">)</span><span class="o">.</span><span class="n">LineStyle</span> <span class="o">=</span> <span class="n">xlContinuous</span>
+        <span class="o">.</span><span class="n">Borders</span><span class="p">(</span><span class="n">xlEdgeBottom</span><span class="p">)</span><span class="o">.</span><span class="n">LineStyle</span> <span class="o">=</span> <span class="n">xlContinuous</span>
+        <span class="o">.</span><span class="n">Borders</span><span class="p">(</span><span class="n">xlEdgeLeft</span><span class="p">)</span><span class="o">.</span><span class="n">LineStyle</span> <span class="o">=</span> <span class="n">xlContinuous</span>
+        <span class="o">.</span><span class="n">Borders</span><span class="p">(</span><span class="n">xlEdgeRight</span><span class="p">)</span><span class="o">.</span><span class="n">LineStyle</span> <span class="o">=</span> <span class="n">xlContinuous</span>
+        <span class="o">.</span><span class="n">Borders</span><span class="p">(</span><span class="n">xlInsideVertical</span><span class="p">)</span><span class="o">.</span><span class="n">LineStyle</span> <span class="o">=</span> <span class="n">xlDouble</span>
+        <span class="o">.</span><span class="n">Borders</span><span class="p">(</span><span class="n">xlInsideHorizontal</span><span class="p">)</span><span class="o">.</span><span class="n">LineStyle</span> <span class="o">=</span> <span class="n">xlDash</span>
+    <span class="n">End</span> <span class="n">With</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">設定框線2</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B3:C6&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Borders</span><span class="o">.</span><span class="n">LineStyle</span> <span class="o">=</span> <span class="n">xlContinuous</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">設定框線3</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B3:C6&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Borders</span><span class="o">.</span><span class="n">LineStyle</span> <span class="o">=</span> <span class="n">xlNone</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">設定框線4</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B3:C6&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">BorderAround</span> <span class="n">LineStyle</span><span class="o">:=</span><span class="n">xlContinuous</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id27">
+<h2>073 指定框線種類<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">設定各種框線</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B3:C6&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">BorderAround</span> <span class="n">LineStyle</span><span class="o">:=</span><span class="n">xlContinuous</span><span class="p">,</span> <span class="n">Weight</span><span class="o">:=</span><span class="n">xlThick</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B3:C3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Borders</span><span class="p">(</span><span class="n">xlEdgeBottom</span><span class="p">)</span><span class="o">.</span><span class="n">LineStyle</span> <span class="o">=</span> <span class="n">xlDouble</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B3:C3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Borders</span><span class="p">(</span><span class="n">xlEdgeBottom</span><span class="p">)</span><span class="o">.</span><span class="n">Weight</span> <span class="o">=</span> <span class="n">xlMedium</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id28">
+<h2>074<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">設定儲存格樣式</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Style</span> <span class="o">=</span> <span class="s2">&quot;標題&quot;</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B3:C3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Style</span> <span class="o">=</span> <span class="s2">&quot;60% - 輔色3&quot;</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B4:B9&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Style</span> <span class="o">=</span> <span class="s2">&quot;40% - 輔色3&quot;</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;C4:C9&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Style</span> <span class="o">=</span> <span class="s2">&quot;20% - 輔色3&quot;</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;C9&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Style</span> <span class="o">=</span> <span class="s2">&quot;百分比&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id29">
+<h2>075 登錄使用者定義的儲存格樣式<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">新增樣式</span><span class="p">()</span>
+    <span class="n">On</span> <span class="n">Error</span> <span class="n">GoTo</span> <span class="n">errHandler</span>
+    <span class="n">With</span> <span class="n">ActiveWorkbook</span><span class="o">.</span><span class="n">Styles</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="n">Name</span><span class="o">:=</span><span class="s2">&quot;myTitle&quot;</span><span class="p">)</span>
+         <span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="mi">38</span>
+         <span class="o">.</span><span class="n">HorizontalAlignment</span> <span class="o">=</span> <span class="n">xlHAlignCenter</span>
+         <span class="o">.</span><span class="n">Font</span><span class="o">.</span><span class="n">Size</span> <span class="o">=</span> <span class="mi">16</span>
+         <span class="o">.</span><span class="n">Font</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="mi">56</span>
+    <span class="n">End</span> <span class="n">With</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B1:C1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Style</span> <span class="o">=</span> <span class="s2">&quot;myTitle&quot;</span>
+    <span class="n">Exit</span> <span class="n">Sub</span>
+<span class="n">errHandler</span><span class="p">:</span>
+   <span class="n">MsgBox</span> <span class="s2">&quot;樣式名重複!!&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">刪除樣式</span><span class="p">()</span>
+    <span class="n">On</span> <span class="n">Error</span> <span class="n">Resume</span> <span class="n">Next</span>
+    <span class="n">ActiveWorkbook</span><span class="o">.</span><span class="n">Styles</span><span class="p">(</span><span class="s2">&quot;myTitle&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Delete</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id30">
+<h2>076 設定儲存格的格式<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module2&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">設定格式</span><span class="p">()</span>
+   <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A5:A9&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">NumberFormatLocal</span> <span class="o">=</span> <span class="s2">&quot;mm/dd&quot;</span>
+   <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B5:B9&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">NumberFormatLocal</span> <span class="o">=</span> <span class="s2">&quot;h:mm AM/PM&quot;</span>
+   <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;C3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">NumberFormatLocal</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;受理:&quot;&quot;@&quot;</span>
+<span class="s2">   Range(&quot;A13:C13&quot;).NumberFormatLocal = &quot;#,##0;[紅色]-#,##0&quot;</span>
+<span class="s2">End Sub</span>
+
+
+<span class="s2">Sub 設定格式2()</span>
+<span class="s2">    Cells.NumberFormat = &quot;general&quot;</span>
+<span class="s2">    Range(&quot;A4:A9&quot;).NumberFormatLocal = &quot;yyyy/m/d&quot;</span>
+<span class="s2">    Range(&quot;B5:B9&quot;).NumberFormatLocal = &quot;h:mm&quot;</span>
+<span class="s2">End Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id31">
+<h2>077 刪除儲存格的值或格式<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">Clear</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1:D1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ClearFormats</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A5:C7&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ClearContents</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;D3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ClearComments</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A10:D10&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Clear</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id32">
+<h2>078 依欄寬自動換列<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module2&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">換行切換</span><span class="p">()</span>
+    <span class="n">With</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;C4:C7&quot;</span><span class="p">)</span>
+         <span class="o">.</span><span class="n">WrapText</span> <span class="o">=</span> <span class="n">Not</span> <span class="o">.</span><span class="n">WrapText</span>
+    <span class="n">End</span> <span class="n">With</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">換行切換2</span><span class="p">()</span>
+<span class="n">Attribute</span> <span class="n">換行切換2</span><span class="o">.</span><span class="n">VB_ProcData</span><span class="o">.</span><span class="n">VB_Invoke_Func</span> <span class="o">=</span> <span class="s2">&quot; </span><span class="se">\n</span><span class="s2">14&quot;</span>
+    
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;C4:C7&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">WrapText</span> <span class="o">=</span> <span class="kc">True</span>
+            
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">換行切換3</span><span class="p">()</span>
+    
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;C4:C7&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">WrapText</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">換行切換4</span><span class="p">()</span>
+    
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;C4:C7&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ShrinkToFit</span> <span class="o">=</span> <span class="kc">True</span>
+        
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">換行切換5</span><span class="p">()</span>
+    
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;C4:C7&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ShrinkToFit</span> <span class="o">=</span> <span class="kc">False</span>
+        
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">分割字串</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Justify</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id33">
+<h2>079 參照合併儲存格<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module2&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">參照合併儲存格</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="mi">2006</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A4&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;12月&quot;</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">MergeArea</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="mi">2007</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A6&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">MergeArea</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;1月&quot;</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">MergeArea</span><span class="o">.</span><span class="n">ClearContents</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ClearContents</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id34">
+<h2>080 合併儲存格<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module2&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">合併儲存格</span><span class="p">()</span>
+    <span class="n">Application</span><span class="o">.</span><span class="n">DisplayAlerts</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A4:A9&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Merge</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B10:D13&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Merge</span> <span class="n">Across</span><span class="o">:=</span><span class="kc">True</span>
+    <span class="n">Application</span><span class="o">.</span><span class="n">DisplayAlerts</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id35">
+<h2>081 設定條件化格式<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">設定條件化格式</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myRange</span> <span class="n">As</span> <span class="n">Range</span><span class="p">,</span> <span class="n">myFC</span> <span class="n">As</span> <span class="n">FormatCondition</span>
+    <span class="n">Set</span> <span class="n">myRange</span> <span class="o">=</span> <span class="n">Worksheets</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Range</span><span class="p">(</span><span class="s2">&quot;E3:E14&quot;</span><span class="p">)</span>
+    <span class="n">If</span> <span class="n">myRange</span><span class="o">.</span><span class="n">FormatConditions</span><span class="o">.</span><span class="n">Count</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="n">Then</span> <span class="n">myRange</span><span class="o">.</span><span class="n">FormatConditions</span><span class="o">.</span><span class="n">Delete</span>
+    <span class="n">Set</span> <span class="n">myFC</span> <span class="o">=</span> <span class="n">myRange</span><span class="o">.</span><span class="n">FormatConditions</span><span class="o">.</span><span class="n">Add</span> <span class="n">_</span>
+        <span class="p">(</span><span class="n">Type</span><span class="o">:=</span><span class="n">xlCellValue</span><span class="p">,</span> <span class="n">Operator</span><span class="o">:=</span><span class="n">xlGreater</span><span class="p">,</span> <span class="n">Formula1</span><span class="o">:=</span><span class="s2">&quot;=1&quot;</span><span class="p">)</span>
+    <span class="n">myFC</span><span class="o">.</span><span class="n">Font</span><span class="o">.</span><span class="n">Bold</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">myFC</span><span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">Color</span> <span class="o">=</span> <span class="n">RGB</span><span class="p">(</span><span class="mi">140</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">230</span><span class="p">)</span>
+    <span class="n">Set</span> <span class="n">myRange</span> <span class="o">=</span> <span class="n">Nothing</span><span class="p">:</span> <span class="n">Set</span> <span class="n">myFC</span> <span class="o">=</span> <span class="n">Nothing</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">設定條件化格式為資料橫條</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myRange</span> <span class="n">As</span> <span class="n">Range</span><span class="p">,</span> <span class="n">myDB</span> <span class="n">As</span> <span class="n">DataBar</span>
+    <span class="n">Set</span> <span class="n">myRange</span> <span class="o">=</span> <span class="n">Worksheets</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Range</span><span class="p">(</span><span class="s2">&quot;E3:E14&quot;</span><span class="p">)</span>
+    <span class="n">Set</span> <span class="n">myDB</span> <span class="o">=</span> <span class="n">myRange</span><span class="o">.</span><span class="n">FormatConditions</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="n">Type</span><span class="o">:=</span><span class="n">xlDatabar</span><span class="p">)</span>
+    <span class="n">myDB</span><span class="o">.</span><span class="n">BarColor</span><span class="o">.</span><span class="n">Color</span> <span class="o">=</span> <span class="n">RGB</span><span class="p">(</span><span class="mi">150</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">Set</span> <span class="n">myRange</span> <span class="o">=</span> <span class="n">Nothing</span><span class="p">:</span> <span class="n">Set</span> <span class="n">myDB</span> <span class="o">=</span> <span class="n">Nothing</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id36">
+<h2>082 確認是否為合併的儲存格<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module2&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">儲存格的合併和刪除</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span>
+    
+    <span class="n">If</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">MergeCells</span> <span class="o">=</span> <span class="kc">True</span> <span class="n">Then</span>
+       <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">MergeCells</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">End</span> <span class="n">If</span>
+    <span class="n">Application</span><span class="o">.</span><span class="n">DisplayAlerts</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">3</span> <span class="n">To</span> <span class="mi">13</span> <span class="n">Step</span> <span class="mi">2</span>
+        <span class="n">Range</span><span class="p">(</span><span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">Offset</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">MergeCells</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">Next</span> <span class="n">i</span>
+    <span class="n">Application</span><span class="o">.</span><span class="n">DisplayAlerts</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id37">
+<h2>083 設定超連結<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">新增超連結</span><span class="p">()</span>
+    <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">Hyperlinks</span><span class="o">.</span><span class="n">Add</span> <span class="n">anchor</span><span class="o">:=</span><span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B3&quot;</span><span class="p">),</span> <span class="n">_</span>
+    <span class="n">Address</span><span class="o">:=</span><span class="s2">&quot;c:\月間銷售</span><span class="se">\1</span><span class="s2">月.xls&quot;</span><span class="p">,</span> <span class="n">SubAddress</span><span class="o">:=</span><span class="s2">&quot;1月!A1&quot;</span><span class="p">,</span> <span class="n">TextToDisplay</span><span class="o">:=</span><span class="s2">&quot;1月&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">刪除超連結</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myHyperLink</span> <span class="n">As</span> <span class="n">Hyperlink</span>
+    
+    <span class="n">For</span> <span class="n">Each</span> <span class="n">myHyperLink</span> <span class="n">In</span> <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">Hyperlinks</span>
+        <span class="n">myHyperLink</span><span class="o">.</span><span class="n">Delete</span>
+    <span class="n">Next</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">新增超連結2</span><span class="p">()</span>
+    <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">Hyperlinks</span><span class="o">.</span><span class="n">Add</span> <span class="n">anchor</span><span class="o">:=</span><span class="n">Range</span><span class="p">(</span><span class="s2">&quot;D3&quot;</span><span class="p">),</span> <span class="n">_</span>
+        <span class="n">Address</span><span class="o">:=</span><span class="s2">&quot;http://www.flag.com.tw/&quot;</span><span class="p">,</span> <span class="n">_</span>
+        <span class="n">TextToDisplay</span><span class="o">:=</span><span class="s2">&quot;旗標資訊&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+<span class="n">Sub</span> <span class="n">新增超連結3</span><span class="p">()</span>
+    <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">Hyperlinks</span><span class="o">.</span><span class="n">Add</span> <span class="n">anchor</span><span class="o">:=</span><span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B3&quot;</span><span class="p">),</span> <span class="n">_</span>
+        <span class="n">Address</span><span class="o">:=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">_</span>
+        <span class="n">SubAddress</span><span class="o">:=</span><span class="s2">&quot;Sheet2!A1&quot;</span><span class="p">,</span> <span class="n">_</span>
+        <span class="n">TextToDisplay</span><span class="o">:=</span><span class="n">Worksheets</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">Name</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id38">
+<h2>084 插入註解<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">新增註解</span><span class="p">()</span>
+    <span class="n">On</span> <span class="n">Error</span> <span class="n">GoTo</span> <span class="n">errHandler</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">AddComment</span> <span class="s2">&quot;做成者: &quot;</span> <span class="o">&amp;</span> <span class="n">Application</span><span class="o">.</span><span class="n">UserName</span>
+    <span class="n">With</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A10&quot;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">AddComment</span> <span class="s2">&quot;輸入日: &quot;</span> <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">Date</span>
+        <span class="o">.</span><span class="n">Comment</span><span class="o">.</span><span class="n">Shape</span><span class="o">.</span><span class="n">AutoShapeType</span> <span class="o">=</span> <span class="n">msoShape24pointStar</span>
+        <span class="o">.</span><span class="n">Comment</span><span class="o">.</span><span class="n">Visible</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">End</span> <span class="n">With</span>
+    <span class="n">Exit</span> <span class="n">Sub</span>
+<span class="n">errHandler</span><span class="p">:</span>
+    <span class="n">MsgBox</span> <span class="s2">&quot;完成插入註解!!&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id39">
+<h2>085 將列或欄隱藏<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">列欄的顯示隱藏</span><span class="p">()</span>
+    
+    <span class="n">Rows</span><span class="p">(</span><span class="s2">&quot;4:9&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Hidden</span> <span class="o">=</span> <span class="n">Not</span> <span class="n">Rows</span><span class="p">(</span><span class="s2">&quot;4:9&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Hidden</span>
+    <span class="n">Columns</span><span class="p">(</span><span class="s2">&quot;B:C&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Hidden</span> <span class="o">=</span> <span class="n">Not</span> <span class="n">Columns</span><span class="p">(</span><span class="s2">&quot;B:C&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Hidden</span>
+    
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id40">
+<h2>086 設定或取得儲存格的值<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module2&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">設定或取得值</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="c1">#5/7/2007#</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="c1">#10:30:00 AM#</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;C5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;王大董&quot;</span>
+    
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A13&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B13&quot;</span><span class="p">)</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B13&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id41">
+<h2>087 取得在儲存格上顯示的值<a class="headerlink" href="#id41" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module2&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">取得值</span><span class="p">()</span>
+    
+    <span class="n">MsgBox</span> <span class="s2">&quot;使用Value屬性取得: &quot;</span> <span class="o">&amp;</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">_</span>
+           <span class="s2">&quot;使用Text屬性取得: &quot;</span> <span class="o">&amp;</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Text</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id42">
+<h2>088 設定或取得儲存格的公式<a class="headerlink" href="#id42" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">計算式</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;D4&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Formula</span> <span class="o">=</span> <span class="s2">&quot;=B4*C4&quot;</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;D5:D6&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">FormulaR1C1</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;D4&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">FormulaR1C1</span>
+
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;C7&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Formula</span> <span class="o">=</span> <span class="s2">&quot;=SUM(C4:C6)&quot;</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;D7&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">FormulaR1C1</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;C7&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">FormulaR1C1</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">計算式2</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;D4:D6&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">FormulaR1C1</span> <span class="o">=</span> <span class="s2">&quot;=RC[-2]*RC[-1]&quot;</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;C7:D7&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">FormulaR1C1</span> <span class="o">=</span> <span class="s2">&quot;=SUM(R[-3]C:R[-1]C)&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id43">
+<h2>089 取得儲存格的高度和寬度<a class="headerlink" href="#id43" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">儲存格的寬和高</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Select</span>
+    <span class="n">MsgBox</span> <span class="s2">&quot;儲存格A1的高度: &quot;</span> <span class="o">&amp;</span> <span class="n">Selection</span><span class="o">.</span><span class="n">Height</span> <span class="o">&amp;</span> <span class="s2">&quot;點&quot;</span> <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">_</span>
+           <span class="s2">&quot;儲存格A1的寬度: &quot;</span> <span class="o">&amp;</span> <span class="n">Selection</span><span class="o">.</span><span class="n">Width</span> <span class="o">&amp;</span> <span class="s2">&quot;點&quot;</span>
+    <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">UsedRange</span><span class="o">.</span><span class="n">Select</span>
+    <span class="n">MsgBox</span> <span class="s2">&quot;使用儲存格範圍的高度: &quot;</span> <span class="o">&amp;</span> <span class="n">Selection</span><span class="o">.</span><span class="n">Height</span> <span class="o">&amp;</span> <span class="s2">&quot;點&quot;</span> <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">_</span>
+           <span class="s2">&quot;使用儲存格範圍的寬度: &quot;</span> <span class="o">&amp;</span> <span class="n">Selection</span><span class="o">.</span><span class="n">Width</span> <span class="o">&amp;</span> <span class="s2">&quot;點&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">已用範圍的寬和高</span><span class="p">()</span>
+    <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">UsedRange</span><span class="o">.</span><span class="n">Select</span>
+    <span class="n">MsgBox</span> <span class="s2">&quot;使用儲存格範圍的高度: &quot;</span> <span class="o">&amp;</span> <span class="n">Selection</span><span class="o">.</span><span class="n">Height</span> <span class="o">*</span> <span class="mf">0.035</span> <span class="o">&amp;</span> <span class="s2">&quot;cm&quot;</span> <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">_</span>
+           <span class="s2">&quot;使用儲存格範圍的寬度: &quot;</span> <span class="o">&amp;</span> <span class="n">Selection</span><span class="o">.</span><span class="n">Width</span> <span class="o">*</span> <span class="mf">0.035</span> <span class="o">&amp;</span> <span class="s2">&quot;cm&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id44">
+<h2>090 變更列高和欄寬<a class="headerlink" href="#id44" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">調整列高欄寬</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">RowHeight</span> <span class="o">=</span> <span class="mi">30</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span><span class="o">.</span><span class="n">RowHeight</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span><span class="o">.</span><span class="n">ColumnWidth</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">調整列高欄寬2</span><span class="p">()</span>
+    <span class="n">Rows</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">RowHeight</span> <span class="o">=</span> <span class="mi">30</span>
+    <span class="n">Rows</span><span class="p">(</span><span class="s2">&quot;3:8&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">RowHeight</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">Columns</span><span class="p">(</span><span class="s2">&quot;B:E&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ColumnWidth</span> <span class="o">=</span> <span class="mi">12</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id45">
+<h2>091 恢復為標準列高和欄寬<a class="headerlink" href="#id45" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">恢復標準列高欄寬</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span><span class="o">.</span><span class="n">UseStandardHeight</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span><span class="o">.</span><span class="n">UseStandardWidth</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">整個工作表恢復標準列高和欄寬</span><span class="p">()</span>
+    <span class="n">Rows</span><span class="o">.</span><span class="n">RowHeight</span> <span class="o">=</span> <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">StandardHeight</span>
+    <span class="n">Columns</span><span class="o">.</span><span class="n">ColumnWidth</span> <span class="o">=</span> <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">StandardWidth</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id46">
+<h2>092 自動調整列高欄寬<a class="headerlink" href="#id46" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">自動調整列高欄寬</span><span class="p">()</span>
+    <span class="n">Rows</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">AutoFit</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span><span class="o">.</span><span class="n">Rows</span><span class="o">.</span><span class="n">AutoFit</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span><span class="o">.</span><span class="n">Columns</span><span class="o">.</span><span class="n">AutoFit</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id47">
+<h2>093 變更儲存格的文字對齊方式<a class="headerlink" href="#id47" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">變更對齊方式</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1:B1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">HorizontalAlignment</span> <span class="o">=</span> <span class="n">xlCenterAcrossSelection</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3:B6&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">HorizontalAlignment</span> <span class="o">=</span> <span class="n">xlCenter</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3:B6&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">VerticalAlignment</span> <span class="o">=</span> <span class="n">xlCenter</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">變更對齊方式2</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3:B3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Orientation</span> <span class="o">=</span> <span class="mi">30</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A4:A6&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Orientation</span> <span class="o">=</span> <span class="n">xlVertical</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id48">
+<h2>094 新增儲存格<a class="headerlink" href="#id48" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">插入儲存格</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">xRange</span> <span class="n">As</span> <span class="n">Range</span>
+    <span class="n">Set</span> <span class="n">xRange</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A4&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span>
+    <span class="n">xRange</span><span class="o">.</span><span class="n">Columns</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">Insert</span> <span class="n">xlToRight</span><span class="p">,</span> <span class="n">xlFormatFromLeftOrAbove</span>
+    <span class="n">xRange</span><span class="o">.</span><span class="n">Columns</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">FormulaR1C1</span> <span class="o">=</span> <span class="s2">&quot;=if(RC[4]&gt;=180, &quot;&quot;合格&quot;&quot;,&quot;&quot;不合格&quot;&quot;)&quot;</span>
+    <span class="n">xRange</span><span class="o">.</span><span class="n">Cells</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;是否合格&quot;</span>
+    <span class="n">Set</span> <span class="n">xRange</span> <span class="o">=</span> <span class="n">Nothing</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id49">
+<h2>095 刪除儲存格<a class="headerlink" href="#id49" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">儲存格插入刪除</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">xRange</span> <span class="n">As</span> <span class="n">Range</span>
+    <span class="n">Set</span> <span class="n">xRange</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A4&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span>
+    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="n">xRange</span><span class="o">.</span><span class="n">Rows</span><span class="o">.</span><span class="n">Count</span> <span class="n">To</span> <span class="mi">2</span> <span class="n">Step</span> <span class="o">-</span><span class="mi">1</span>
+        <span class="n">If</span> <span class="n">xRange</span><span class="o">.</span><span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">Then</span>
+           <span class="n">xRange</span><span class="o">.</span><span class="n">Rows</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">Delete</span> <span class="n">shift</span><span class="o">:=</span><span class="n">xlShiftUp</span>
+        <span class="n">End</span> <span class="n">If</span>
+    <span class="n">Next</span>
+    <span class="n">Set</span> <span class="n">xRange</span> <span class="o">=</span> <span class="n">Nothing</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">列欄插入刪除</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">EntireRow</span><span class="o">.</span><span class="n">Insert</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">EntireColumn</span><span class="o">.</span><span class="n">Delete</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id50">
+<h2>096 將儲存格的值複製到其他儲存格<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">複製</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A5:F9&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Copy</span>
+    <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">Paste</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A13&quot;</span><span class="p">)</span>
+    <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">Paste</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A21&quot;</span><span class="p">)</span>
+    <span class="n">Application</span><span class="o">.</span><span class="n">CutCopyMode</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id51">
+<h2>097 不經過剪貼簿直接複製並貼上<a class="headerlink" href="#id51" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module2&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">直接複製</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A5:F9&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Copy</span> <span class="n">Destination</span><span class="o">:=</span><span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A13&quot;</span><span class="p">)</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">移動</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A5:D9&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Cut</span> <span class="n">Destination</span><span class="o">:=</span><span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A13&quot;</span><span class="p">)</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id52">
+<h2>098 選擇格式後貼上<a class="headerlink" href="#id52" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module2&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">選擇格式貼上</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A5:D9&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Copy</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;F5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">PasteSpecial</span> <span class="n">Paste</span><span class="o">:=</span><span class="n">xlPasteColumnWidths</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;F5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">PasteSpecial</span> <span class="n">Paste</span><span class="o">:=</span><span class="n">xlPasteFormats</span>
+    <span class="n">Application</span><span class="o">.</span><span class="n">CutCopyMode</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="ch01_%E5%9F%BA%E6%9C%AC.html" title="previous page">Ch01 基本</a>
+    <a class='right-next' id="next-link" href="ch03_%E8%B3%87%E6%96%99%E6%93%8D%E4%BD%9C.html" title="next page">Ch03 資料操作</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book Community<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

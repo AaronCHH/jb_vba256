@@ -1,0 +1,1389 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ch01 基本 &#8212; My sample book</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Ch02 儲存格" href="ch02_%E5%84%B2%E5%AD%98%E6%A0%BC.html" />
+    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">My sample book</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Ch01 基本
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch02_%E5%84%B2%E5%AD%98%E6%A0%BC.html">
+   Ch02 儲存格
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch03_%E8%B3%87%E6%96%99%E6%93%8D%E4%BD%9C.html">
+   Ch03 資料操作
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch04_%E5%B7%A5%E4%BD%9C%E8%A1%A8.html">
+   Ch04 工作表
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch05_%E6%B4%BB%E9%A0%81%E7%B0%BF.html">
+   Ch05 活頁簿
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch06_%E6%AA%94%E6%A1%88.html">
+   Ch06 檔案
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch07_%E8%A6%96%E7%AA%97.html">
+   Ch07 視窗
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch08_%E5%88%97%E5%8D%B0.html">
+   Ch08 列印
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch09_%E7%9B%AE%E6%9C%9F%E6%99%82%E9%96%93%E5%87%BD%E6%95%B8.html">
+   Ch09 日期時間函數
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch10_%E6%96%87%E5%AD%97%E6%93%8D%E4%BD%9C%E5%87%BD%E6%95%B8.html">
+   Ch10 文字操作函數
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch11_%E5%85%B6%E4%BB%96%E5%87%BD%E6%95%B8.html">
+   Ch11 其他函數
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch12_%E5%9C%96%E8%A1%A8%E5%9C%96%E6%A1%88.html">
+   Ch12 圖表、圖案
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch13_%E4%BD%BF%E7%94%A8%E8%80%85%E8%A1%A8%E5%96%AE.html">
+   Ch13 使用者表單
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch14_%E5%A4%96%E9%83%A8%E8%B3%87%E6%96%99%E6%93%8D%E4%BD%9C%E8%88%87%E5%85%B6%E4%BB%96.html">
+   Ch14 外部資料操作與其他
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/ch01_基本.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fch01_基本.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   004 宣告變數
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   005 強制宣告變數
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   006 變數使用範圍和有效期間
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   007 使用變數來參照工作表或儲存格等物件
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   008 使用常數
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   009 取得變數或物件的資料型態
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   010 將字串轉換為整數或日期
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id8">
+   012 使用相同變數名稱代表 2 個以上的變數
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id9">
+   013 將預設的開始值變為 1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id10">
+   014 將值匯集設定給陣列
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id11">
+   015 確認變數的值是否為陣列
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id12">
+   016 元素個數不定的陣列
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id13">
+   017 保留陣列中的值並變更元素的個數
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id14">
+   018 陣列的下限值和上限值
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id15">
+   019 以陣列方式看待由欄和列所構成的資料
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id16">
+   020 切割字串後組成陣列
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id17">
+   021 將陣列的各元素連接成為字串
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id18">
+   022 顯示訊息
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id19">
+   023 顯示讓使用者輸入字串的對話方塊
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id20">
+   024 限定讓使用者輸入資料的種類
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id21">
+   025 同一物件的連續處理
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id22">
+   026 滿足條件式時執行處理
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id23">
+   027 不滿足條件式時執行處理
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id24">
+   028 依照多種條件分別進行處理
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id25">
+   029 依照多種情況個別進行處理
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id26">
+   030 指定次數做重複處理
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id27">
+   031 滿足條件時做重複處理
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id28">
+   032 滿足條件前做重複處理
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id29">
+   033 最少執行 1 次處理
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id30">
+   034 針對集合內的全部元素作相同的處理
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id31">
+   035 中斷處理跳出
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id32">
+   036 呼叫其他程序
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id33">
+   037 傳遞引數到子程序
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id34">
+   038 傳值呼叫和傳址呼叫
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id35">
+   039 呼叫其他活頁簿的程序
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id36">
+   040 在指定時間執行程序
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id37">
+   041 發生錯誤時正常結束
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id38">
+   042 錯誤處理後要續執行程式
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id39">
+   043 檢查程式時確認變數或屬性的值
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id40">
+   044 檢查程式時輸出變數或屬性的值
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="ch01">
+<h1>Ch01 基本<a class="headerlink" href="#ch01" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>004 宣告變數<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-vba notranslate"><div class="highlight"><pre><span></span>Attribute VB_Name = &quot;Module1&quot;
+Sub HensuTest()
+    Dim myName As String
+    Dim myDate As Date, myAge As Integer
+    Dim myHeight As Single
+    
+    myName = &quot;王小花&quot;
+    myDate = #4/8/1997#
+    myAge = Range(&quot;A1&quot;).Value
+    myHeight = 142.3
+
+    MsgBox &quot;姓 名:&quot; &amp; myName &amp; Chr(10) &amp; &quot;生 日:&quot; &amp; myBirth &amp; _
+           &quot;年 齡:&quot; &amp; myAge &amp; Chr(10) &amp; &quot;身 高:&quot; &amp; myHeight
+End Sub
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>005 強制宣告變數<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">HensuTest</span><span class="p">()</span>
+
+    <span class="n">Dim</span> <span class="n">myName</span> <span class="n">As</span> <span class="n">String</span>
+    <span class="n">Dim</span> <span class="n">myDate</span> <span class="n">As</span> <span class="n">Date</span><span class="p">,</span> <span class="n">myAge</span> <span class="n">As</span> <span class="n">Integer</span>
+    <span class="n">Dim</span> <span class="n">myHeight</span> <span class="n">As</span> <span class="n">Single</span>
+    
+    <span class="n">myName</span> <span class="o">=</span> <span class="s2">&quot;王小花&quot;</span>
+    <span class="n">myBirth</span> <span class="o">=</span> <span class="c1">#4/8/1997#</span>
+    <span class="n">myAge</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+    <span class="n">myHeight</span> <span class="o">=</span> <span class="mf">142.3</span>
+    
+    <span class="n">MsgBox</span> <span class="s2">&quot;姓 名:&quot;</span> <span class="o">&amp;</span> <span class="n">myName</span> <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">&amp;</span> <span class="s2">&quot;生 日:&quot;</span> <span class="o">&amp;</span> <span class="n">myBirth</span> <span class="o">&amp;</span> <span class="n">_</span>
+           <span class="s2">&quot;年 齡:&quot;</span> <span class="o">&amp;</span> <span class="n">myAge</span> <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">&amp;</span> <span class="s2">&quot;身 高:&quot;</span> <span class="o">&amp;</span> <span class="n">myHeight</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>006 變數使用範圍和有效期間<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-vba notranslate"><div class="highlight"><pre><span></span>Attribute VB_Name = &quot;Module1&quot;
+Public pubID As String
+Dim mojNickName As String
+
+Sub text1()
+    Dim proString As String
+    
+    proString = &quot;王小花&quot;
+    pubID = &quot;wang_sho_fa&quot;
+    mojNickName = &quot;小花&quot;
+    
+    MsgBox &quot;姓名:&quot; &amp; proString &amp; Chr(10) &amp; _
+           &quot;ID:&quot; &amp; pubID &amp; Chr(10) &amp; _
+           &quot;小名:&quot; &amp; mojNickName &amp; Chr(10)
+    
+End Sub
+
+Sub text2()
+
+    MsgBox mojNickName &amp; &quot;小姐&quot; &amp; _
+           &quot;午安&quot;, , pubID
+End Sub
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module2&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">text3</span><span class="p">()</span>
+
+    <span class="n">MsgBox</span> <span class="s2">&quot;您的ID:&quot;</span> <span class="o">&amp;</span> <span class="n">pubID</span>
+
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>007 使用變數來參照工作表或儲存格等物件<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">ObjectTest</span><span class="p">()</span>
+
+    <span class="n">Dim</span> <span class="n">myRange</span> <span class="n">As</span> <span class="n">Range</span>
+    <span class="n">Set</span> <span class="n">myRange</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1:C3&quot;</span><span class="p">)</span>
+    
+    <span class="n">myRange</span><span class="o">.</span><span class="n">Select</span>
+    <span class="n">myRange</span><span class="o">.</span><span class="n">Borders</span><span class="o">.</span><span class="n">LineStyle</span> <span class="o">=</span> <span class="n">xlContinuous</span>
+    
+    <span class="n">Set</span> <span class="n">myRange</span> <span class="o">=</span> <span class="n">Nothing</span>
+    
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>008 使用常數<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">TeisuTest</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myWeight</span> <span class="n">As</span> <span class="n">Double</span>
+    
+    <span class="n">Const</span> <span class="n">ToPound</span> <span class="n">As</span> <span class="n">Double</span> <span class="o">=</span> <span class="mf">2.20462</span>
+    
+    <span class="n">myWeight</span> <span class="o">=</span> <span class="n">Val</span><span class="p">(</span><span class="n">InputBox</span><span class="p">(</span><span class="s2">&quot;請輸入體重!! (kg單位)&quot;</span><span class="p">))</span>
+    <span class="n">MsgBox</span> <span class="s2">&quot;約&quot;</span> <span class="o">&amp;</span> <span class="n">Int</span><span class="p">(</span><span class="n">myWeight</span> <span class="o">*</span> <span class="n">ToPound</span><span class="p">)</span> <span class="o">&amp;</span> <span class="s2">&quot;英鎊!!&quot;</span>
+    
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>009 取得變數或物件的資料型態<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">TypeNameTest</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myVar</span> <span class="n">As</span> <span class="n">Object</span>
+    <span class="n">Set</span> <span class="n">myVar</span> <span class="o">=</span> <span class="n">ActiveSheet</span>
+    
+    <span class="n">Select</span> <span class="n">Case</span> <span class="n">TypeName</span><span class="p">(</span><span class="n">myVar</span><span class="p">)</span>
+        <span class="n">Case</span> <span class="s2">&quot;Worksheet&quot;</span>
+             <span class="n">myVar</span><span class="o">.</span><span class="n">PrintPreview</span>
+        <span class="n">Case</span> <span class="s2">&quot;Chart&quot;</span>
+             <span class="n">MsgBox</span> <span class="s2">&quot;請選擇工作表!!&quot;</span>
+    <span class="n">End</span> <span class="n">Select</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">TypeNameTest2</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myVar2</span>
+    <span class="n">myVar2</span> <span class="o">=</span> <span class="n">Selection</span><span class="o">.</span><span class="n">Value</span>
+    <span class="n">MsgBox</span> <span class="n">TypeName</span><span class="p">(</span><span class="n">myVar2</span><span class="p">)</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>010 將字串轉換為整數或日期<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">資料型態轉換</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myInt</span> <span class="n">As</span> <span class="n">String</span>
+    <span class="n">Dim</span> <span class="n">myDate</span> <span class="n">As</span> <span class="n">String</span>
+    <span class="n">myInt</span> <span class="o">=</span> <span class="s2">&quot;42.195&quot;</span>
+    <span class="n">myDate</span> <span class="o">=</span> <span class="s2">&quot;民國98年10月10日&quot;</span>
+    <span class="n">MsgBox</span> <span class="s2">&quot;變換為整數：&quot;</span> <span class="o">&amp;</span> <span class="n">myInt</span> <span class="o">&amp;</span> <span class="s2">&quot; → &quot;</span> <span class="o">&amp;</span> <span class="n">CInt</span><span class="p">(</span><span class="n">myInt</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">_</span>
+           <span class="s2">&quot;變換為日期：&quot;</span> <span class="o">&amp;</span> <span class="n">myDate</span> <span class="o">&amp;</span> <span class="s2">&quot; → &quot;</span> <span class="o">&amp;</span> <span class="n">CDate</span><span class="p">(</span><span class="n">myDate</span><span class="p">)</span>
+
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">CInt函數測試</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myInt</span> <span class="n">As</span> <span class="n">String</span>
+    <span class="n">On</span> <span class="n">Error</span> <span class="n">GoTo</span> <span class="n">errMsg</span>
+    <span class="n">myInt</span> <span class="o">=</span> <span class="s2">&quot;1.5&quot;</span>
+    <span class="n">Debug</span><span class="o">.</span><span class="n">Print</span> <span class="n">myInt</span> <span class="o">&amp;</span> <span class="s2">&quot; → &quot;</span> <span class="o">&amp;</span> <span class="n">CInt</span><span class="p">(</span><span class="n">myInt</span><span class="p">)</span>
+    <span class="n">myInt</span> <span class="o">=</span> <span class="s2">&quot;2.5&quot;</span>
+    <span class="n">Debug</span><span class="o">.</span><span class="n">Print</span> <span class="n">myInt</span> <span class="o">&amp;</span> <span class="s2">&quot; → &quot;</span> <span class="o">&amp;</span> <span class="n">CInt</span><span class="p">(</span><span class="n">myInt</span><span class="p">)</span>
+    <span class="n">myInt</span> <span class="o">=</span> <span class="s2">&quot;40000&quot;</span>
+    <span class="n">Debug</span><span class="o">.</span><span class="n">Print</span> <span class="n">myInt</span> <span class="o">&amp;</span> <span class="s2">&quot; → &quot;</span> <span class="o">&amp;</span> <span class="n">CInt</span><span class="p">(</span><span class="n">myInt</span><span class="p">)</span>
+    <span class="n">Exit</span> <span class="n">Sub</span>
+<span class="n">errMsg</span><span class="p">:</span>
+    <span class="n">MsgBox</span> <span class="n">Err</span><span class="o">.</span><span class="n">Number</span> <span class="o">&amp;</span> <span class="s2">&quot;：&quot;</span> <span class="o">&amp;</span> <span class="n">Err</span><span class="o">.</span><span class="n">Description</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>012 使用相同變數名稱代表 2 個以上的變數<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">陣列練習</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">xArray</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="n">As</span> <span class="n">String</span>
+    <span class="n">xArray</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;王小華&quot;</span>
+    <span class="n">xArray</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;民國98年10月10日&quot;</span>
+    <span class="n">xArray</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;A&quot;</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B2&quot;</span><span class="p">)</span> <span class="o">=</span> <span class="n">xArray</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B3&quot;</span><span class="p">)</span> <span class="o">=</span> <span class="n">CDate</span><span class="p">(</span><span class="n">xArray</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B4&quot;</span><span class="p">)</span> <span class="o">=</span> <span class="n">xArray</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>013 將預設的開始值變為 1<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Option</span> <span class="n">Base</span> <span class="mi">1</span>
+
+<span class="n">Sub</span> <span class="n">陣列練習2</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">xArray</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="n">As</span> <span class="n">String</span>
+    <span class="n">xArray</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;王小明&quot;</span>
+    <span class="n">xArray</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;1988/8/19&quot;</span>
+    <span class="n">xArray</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;AB&quot;</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B2&quot;</span><span class="p">)</span> <span class="o">=</span> <span class="n">xArray</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B3&quot;</span><span class="p">)</span> <span class="o">=</span> <span class="n">xArray</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B4&quot;</span><span class="p">)</span> <span class="o">=</span> <span class="n">xArray</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>014 將值匯集設定給陣列<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">Array函數</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myArray</span> <span class="n">As</span> <span class="n">Variant</span>
+    
+    <span class="n">myArray</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="s2">&quot;陳小明&quot;</span><span class="p">,</span> <span class="c1">#3/10/2009#, &quot;A&quot;)</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B2&quot;</span><span class="p">)</span> <span class="o">=</span> <span class="n">myArray</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B3&quot;</span><span class="p">)</span> <span class="o">=</span> <span class="n">myArray</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B4&quot;</span><span class="p">)</span> <span class="o">=</span> <span class="n">myArray</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>015 確認變數的值是否為陣列<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Sub</span> <span class="n">檢視陣列</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myArray</span> <span class="n">As</span> <span class="n">Variant</span>
+    <span class="n">MsgBox</span> <span class="n">IsArray</span><span class="p">(</span><span class="n">myArray</span><span class="p">)</span>
+    
+    <span class="n">myArray</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="s2">&quot;陳小華&quot;</span><span class="p">,</span> <span class="c1">#9/10/2009#, &quot;AB&quot;)</span>
+    <span class="n">MsgBox</span> <span class="n">IsArray</span><span class="p">(</span><span class="n">myArray</span><span class="p">)</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>016 元素個數不定的陣列<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">動態陣列</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myName</span><span class="p">()</span> <span class="n">As</span> <span class="n">String</span>
+    <span class="n">Dim</span> <span class="n">cnt</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span>
+    <span class="n">cnt</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">End</span><span class="p">(</span><span class="n">xlDown</span><span class="p">)</span><span class="o">.</span><span class="n">Row</span>
+    <span class="n">ReDim</span> <span class="n">myName</span><span class="p">(</span><span class="n">cnt</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">To</span> <span class="n">cnt</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="n">myName</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+        <span class="n">Worksheets</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">Name</span> <span class="o">=</span> <span class="n">myName</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">Next</span> <span class="n">i</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>017 保留陣列中的值並變更元素的個數<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">變更元素個數1</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myArray</span><span class="p">()</span> <span class="n">As</span> <span class="n">String</span><span class="p">,</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span>
+    <span class="n">ReDim</span> <span class="n">myArray</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">myArray</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;陳大明&quot;</span>
+    <span class="n">myArray</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;張小華&quot;</span>
+    <span class="n">ReDim</span> <span class="n">myArray</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">myArray</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;王大可&quot;</span>
+    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">To</span> <span class="n">UBound</span><span class="p">(</span><span class="n">myArray</span><span class="p">)</span>
+        <span class="n">Cells</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">myArray</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">Next</span> <span class="n">i</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">變更元素個數2</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myArray</span><span class="p">()</span> <span class="n">As</span> <span class="n">String</span><span class="p">,</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span>
+    <span class="n">ReDim</span> <span class="n">myArray</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">myArray</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;陳大明&quot;</span>
+    <span class="n">myArray</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;張小華&quot;</span>
+    <span class="n">ReDim</span> <span class="n">Preserve</span> <span class="n">myArray</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">myArray</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;王大可&quot;</span>
+    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">To</span> <span class="n">UBound</span><span class="p">(</span><span class="n">myArray</span><span class="p">)</span>
+        <span class="n">Cells</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">myArray</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">Next</span> <span class="n">i</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>018 陣列的下限值和上限值<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">陣列的下限值與上限值</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myArray1</span><span class="p">(</span><span class="mi">1</span> <span class="n">To</span> <span class="mi">3</span><span class="p">)</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">myArray2</span> <span class="n">As</span> <span class="n">Variant</span>
+    <span class="n">myArray2</span> <span class="o">=</span> <span class="n">Array</span><span class="p">(</span><span class="s2">&quot;陳大同&quot;</span><span class="p">,</span> <span class="c1">#10/10/2009#, &quot;A&quot;, &quot;台北市&quot;, &quot;未婚&quot;)</span>
+    
+    <span class="n">MsgBox</span> <span class="s2">&quot;下限值&quot;</span> <span class="o">&amp;</span> <span class="n">LBound</span><span class="p">(</span><span class="n">myArray1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">_</span>
+           <span class="s2">&quot;﹑上限值&quot;</span> <span class="o">&amp;</span> <span class="n">UBound</span><span class="p">(</span><span class="n">myArray1</span><span class="p">),</span> <span class="p">,</span> <span class="s2">&quot;myarray1的下限值‧上限值&quot;</span>
+
+    <span class="n">MsgBox</span> <span class="s2">&quot;下限值&quot;</span> <span class="o">&amp;</span> <span class="n">LBound</span><span class="p">(</span><span class="n">myArray2</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">_</span>
+           <span class="s2">&quot;﹑上限值&quot;</span> <span class="o">&amp;</span> <span class="n">UBound</span><span class="p">(</span><span class="n">myArray2</span><span class="p">),</span> <span class="p">,</span> <span class="s2">&quot;myarray2的下限值‧上限值&quot;</span>
+           
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id15">
+<h2>019 以陣列方式看待由欄和列所構成的資料<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">二維陣列</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myArray</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="n">As</span> <span class="n">Variant</span>
+    <span class="n">Dim</span> <span class="n">i</span>  <span class="n">As</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">j</span> <span class="n">As</span> <span class="n">Integer</span>
+    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">To</span> <span class="mi">3</span>
+        <span class="n">For</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">To</span> <span class="mi">2</span>
+            <span class="n">myArray</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span> <span class="o">=</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">,</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+            <span class="n">Debug</span><span class="o">.</span><span class="n">Print</span> <span class="n">myArray</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+        <span class="n">Next</span> <span class="n">j</span>
+    <span class="n">Next</span> <span class="n">i</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">二維陣列2</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myArray</span> <span class="n">As</span> <span class="n">Variant</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">j</span> <span class="n">As</span> <span class="n">Integer</span>
+    
+    <span class="n">myArray</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B3:D6&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="n">To</span> <span class="mi">4</span>
+        <span class="n">For</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="n">To</span> <span class="mi">3</span>
+            <span class="n">Debug</span><span class="o">.</span><span class="n">Print</span> <span class="n">myArray</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
+        <span class="n">Next</span> <span class="n">j</span>
+    <span class="n">Next</span> <span class="n">i</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id16">
+<h2>020 切割字串後組成陣列<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="s1">&#39;Sheet1</span>
+<span class="n">Sub</span> <span class="n">RetsuBunKatsu</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myArray</span><span class="p">()</span> <span class="n">As</span> <span class="n">String</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">j</span> <span class="n">As</span> <span class="n">Integer</span>
+    <span class="n">For</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span> <span class="n">To</span> <span class="mi">4</span>
+        <span class="n">myArray</span> <span class="o">=</span> <span class="n">Split</span><span class="p">(</span><span class="n">Cells</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;,&quot;</span><span class="p">)</span>
+        <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">To</span> <span class="n">UBound</span><span class="p">(</span><span class="n">myArray</span><span class="p">)</span>
+            <span class="n">Cells</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="mi">3</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">myArray</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">Next</span> <span class="n">i</span>
+    <span class="n">Next</span> <span class="n">j</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="s1">&#39;Sheet2</span>
+<span class="n">Sub</span> <span class="n">GyoBunKatsu</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myArray</span><span class="p">()</span> <span class="n">As</span> <span class="n">String</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span>
+    
+    <span class="n">myArray</span> <span class="o">=</span> <span class="n">Split</span><span class="p">(</span><span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">),</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">To</span> <span class="n">UBound</span><span class="p">(</span><span class="n">myArray</span><span class="p">)</span>
+        <span class="n">Cells</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">myArray</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">Next</span> <span class="n">i</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="s1">&#39;Sheet3</span>
+<span class="n">Sub</span> <span class="n">GyoBunKatsu2</span><span class="p">()</span>
+    
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1:A4&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">TextToColumns</span> <span class="n">_</span>
+        <span class="n">Destination</span><span class="o">:=</span><span class="n">Range</span><span class="p">(</span><span class="s2">&quot;C1:C4&quot;</span><span class="p">),</span> <span class="n">_</span>
+        <span class="n">DataType</span><span class="o">:=</span><span class="n">xlDelimited</span><span class="p">,</span> <span class="n">_</span>
+        <span class="n">Comma</span><span class="o">:=</span><span class="kc">True</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id17">
+<h2>021 將陣列的各元素連接成為字串<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">結合陣列</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myArray1</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">As</span> <span class="n">String</span><span class="p">,</span> <span class="n">myArray2</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="n">As</span> <span class="n">String</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span>
+    <span class="n">Worksheets</span><span class="p">(</span><span class="s2">&quot;Sheet1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Select</span>
+    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span> <span class="n">To</span> <span class="mi">6</span>
+        <span class="n">myArray1</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+        <span class="n">myArray1</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+        <span class="n">myArray2</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">=</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+        <span class="n">myArray2</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+        <span class="n">myArray2</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+        <span class="n">Worksheets</span><span class="p">(</span><span class="s2">&quot;Sheet2&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">Join</span><span class="p">(</span><span class="n">myArray1</span><span class="p">)</span>
+        <span class="n">Worksheets</span><span class="p">(</span><span class="s2">&quot;Sheet2&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">Join</span><span class="p">(</span><span class="n">myArray2</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">Next</span> <span class="n">i</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id18">
+<h2>022 顯示訊息<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">確認清除</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">ans</span> <span class="n">As</span> <span class="n">Integer</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="n">MsgBox</span><span class="p">(</span><span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A4&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="s2">&quot;的週負責人，&quot;</span> <span class="o">&amp;</span> <span class="n">_</span>
+               <span class="n">Chr</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">&amp;</span> <span class="s2">&quot;可以清除嗎?&quot;</span><span class="p">,</span> <span class="n">_</span>
+               <span class="n">vbYesNo</span> <span class="o">+</span> <span class="n">vbQuestion</span><span class="p">,</span> <span class="s2">&quot;清除確認&quot;</span><span class="p">)</span>
+    <span class="n">If</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">vbYes</span> <span class="n">Then</span>
+       <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;C4:D10&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ClearContents</span>
+    <span class="n">End</span> <span class="n">If</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id19">
+<h2>023 顯示讓使用者輸入字串的對話方塊<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">輸入指令</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myComment</span> <span class="n">As</span> <span class="n">String</span>
+    <span class="n">myComment</span> <span class="o">=</span> <span class="n">InputBox</span><span class="p">(</span><span class="s2">&quot;請鍵入20字以內的說明&quot;</span><span class="p">,</span> <span class="n">_</span>
+                <span class="s2">&quot;輸入說明&quot;</span><span class="p">,</span> <span class="s2">&quot;來自&quot;</span> <span class="o">&amp;</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A4&quot;</span><span class="p">)</span> <span class="o">&amp;</span> <span class="s2">&quot;先生(小姐)的訊息&quot;</span><span class="p">)</span>
+    <span class="n">If</span> <span class="n">Len</span><span class="p">(</span><span class="n">myComment</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">20</span> <span class="n">Then</span>
+       <span class="n">MsgBox</span> <span class="s2">&quot;字串過長。&quot;</span> <span class="o">&amp;</span> <span class="n">Len</span><span class="p">(</span><span class="n">myComment</span><span class="p">)</span>
+       <span class="n">Exit</span> <span class="n">Sub</span>
+    <span class="n">End</span> <span class="n">If</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B4&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">myComment</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id20">
+<h2>024 限定讓使用者輸入資料的種類<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">輸入指定資料</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myAge</span> <span class="n">As</span> <span class="n">Variant</span>
+    <span class="n">myAge</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">InputBox</span><span class="p">(</span><span class="s2">&quot;請輸入年齡&quot;</span><span class="p">,</span> <span class="n">_</span>
+           <span class="s2">&quot;輸入年齡&quot;</span><span class="p">,</span> <span class="n">Type</span><span class="o">:=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">If</span> <span class="n">TypeName</span><span class="p">(</span><span class="n">myAge</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;Boolean&quot;</span> <span class="n">Then</span>
+       <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B4&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;非公開&quot;</span>
+    <span class="n">Else</span>
+       <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B4&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">myAge</span>
+    <span class="n">End</span> <span class="n">If</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id21">
+<h2>025 同一物件的連續處理<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">物件處理</span><span class="p">()</span>
+    <span class="n">With</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3:D10&quot;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">HorizontalAlignment</span> <span class="o">=</span> <span class="n">xlCenter</span>
+        <span class="o">.</span><span class="n">Borders</span><span class="o">.</span><span class="n">LineStyle</span> <span class="o">=</span> <span class="n">xlContinuous</span>
+        <span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">ThemeColor</span> <span class="o">=</span> <span class="n">xlThemeColorAccent6</span>
+        <span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">TintAndShade</span> <span class="o">=</span> <span class="mf">0.8</span>
+    <span class="n">End</span> <span class="n">With</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id22">
+<h2>026 滿足條件式時執行處理<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Attribute VB_Name = &quot;Module1&quot;
+Option Explicit
+
+Sub ±ø¥óif()
+    If Range(&quot;B4&quot;).Value &gt; Range(&quot;B1&quot;).Value Then
+       Range(&quot;B4&quot;).Font.ColorIndex = 3
+    End If
+End Sub
+</pre></div>
+</div>
+</div>
+<div class="section" id="id23">
+<h2>027 不滿足條件式時執行處理<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">條件if2</span><span class="p">()</span>
+    <span class="n">If</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B4&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">&gt;</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="n">Then</span>
+       <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;▲&quot;</span>
+       <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Font</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">Else</span>
+       <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;▼&quot;</span>
+       <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Font</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">End</span> <span class="n">If</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id24">
+<h2>028 依照多種條件分別進行處理<a class="headerlink" href="#id24" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">條件if3</span><span class="p">()</span>
+    <span class="n">If</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B4&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">&gt;=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">+</span> <span class="mi">5</span> <span class="n">Then</span>
+       <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;▲▲&quot;</span>
+       <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Font</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">ElseIf</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B4&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">&gt;=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B1&quot;</span><span class="p">)</span> <span class="n">Then</span>
+       <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;▲&quot;</span>
+       <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Font</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="mi">45</span>
+    <span class="n">Else</span>
+       <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;▼&quot;</span>
+       <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Font</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="mi">5</span>
+    <span class="n">End</span> <span class="n">If</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id25">
+<h2>029 依照多種情況個別進行處理<a class="headerlink" href="#id25" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">條件4</span><span class="p">()</span>
+    <span class="n">With</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B5&quot;</span><span class="p">)</span>
+    <span class="n">Select</span> <span class="n">Case</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B4&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">-</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+        <span class="n">Case</span> <span class="n">Is</span> <span class="o">&gt;=</span> <span class="mi">5</span>
+            <span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;▲▲&quot;</span>
+            <span class="o">.</span><span class="n">Font</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="mi">3</span>
+        <span class="n">Case</span> <span class="n">Is</span> <span class="o">&gt;</span> <span class="mi">0</span>
+            <span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;▲&quot;</span>
+            <span class="o">.</span><span class="n">Font</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="mi">45</span>
+        <span class="n">Case</span> <span class="mi">0</span>
+            <span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;--&quot;</span>
+            <span class="o">.</span><span class="n">Font</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">Case</span> <span class="n">Is</span> <span class="o">&lt;=</span> <span class="o">-</span><span class="mi">5</span>
+            <span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;▼▼&quot;</span>
+            <span class="o">.</span><span class="n">Font</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="mi">5</span>
+        <span class="n">Case</span> <span class="n">Is</span> <span class="o">&lt;</span> <span class="mi">0</span>
+            <span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;▼&quot;</span>
+            <span class="o">.</span><span class="n">Font</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="mi">43</span>
+    <span class="n">End</span> <span class="n">Select</span>
+    <span class="n">End</span> <span class="n">With</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id26">
+<h2>030 指定次數做重複處理<a class="headerlink" href="#id26" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">重複1</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span>
+    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span> <span class="n">To</span> <span class="mi">5</span>
+        <span class="n">Worksheets</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">Name</span> <span class="o">=</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+    <span class="n">Next</span> <span class="n">i</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">KuriKaeshi1</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span>
+    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">5</span> <span class="n">To</span> <span class="mi">2</span> <span class="n">Step</span> <span class="o">-</span><span class="mi">2</span>
+        <span class="n">Range</span><span class="p">(</span><span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span><span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="mi">40</span>
+    <span class="n">Next</span> <span class="n">i</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id27">
+<h2>031 滿足條件時做重複處理<a class="headerlink" href="#id27" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">Loop1</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">Do</span> <span class="n">While</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">&lt;&gt;</span> <span class="s2">&quot;&quot;</span>
+       <span class="n">If</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="n">Then</span>
+          <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="mi">38</span>
+       <span class="n">End</span> <span class="n">If</span>
+       <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">Loop</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id28">
+<h2>032 滿足條件前做重複處理<a class="headerlink" href="#id28" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">Loop2</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">Do</span> <span class="n">Until</span> <span class="n">Month</span><span class="p">(</span><span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span><span class="p">)</span> <span class="o">=</span> <span class="mi">4</span>
+       <span class="n">If</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">&gt;=</span> <span class="mi">1</span> <span class="n">Then</span>
+          <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="mi">38</span>
+       <span class="n">End</span> <span class="n">If</span>
+       <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">Loop</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id29">
+<h2>033 最少執行 1 次處理<a class="headerlink" href="#id29" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">Loop3</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">myWeight</span> <span class="n">As</span> <span class="n">Double</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">3</span>
+    
+    <span class="n">Do</span>
+       <span class="n">myWeight</span> <span class="o">=</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+       <span class="n">Select</span> <span class="n">Case</span> <span class="n">myWeight</span>
+           <span class="n">Case</span> <span class="n">Is</span> <span class="o">&gt;</span> <span class="n">Cells</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+               <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;N&quot;</span>
+           <span class="n">Case</span> <span class="n">Else</span>
+               <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s2">&quot;C&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;Y&quot;</span>
+       <span class="n">End</span> <span class="n">Select</span>
+       <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">Loop</span> <span class="n">While</span> <span class="n">myWeight</span> <span class="o">&gt;</span> <span class="n">Cells</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id30">
+<h2>034 針對集合內的全部元素作相同的處理<a class="headerlink" href="#id30" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">Loop4</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myRange</span> <span class="n">As</span> <span class="n">Range</span>
+    
+    <span class="n">For</span> <span class="n">Each</span> <span class="n">myRange</span> <span class="n">In</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B2&quot;</span><span class="p">,</span> <span class="s2">&quot;D7&quot;</span><span class="p">)</span>
+        <span class="n">If</span> <span class="n">myRange</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="n">Then</span>
+           <span class="n">myRange</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;未提出&quot;</span>
+           <span class="n">myRange</span><span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">ColorIndex</span> <span class="o">=</span> <span class="mi">35</span>
+        <span class="n">End</span> <span class="n">If</span>
+    <span class="n">Next</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id31">
+<h2>035 中斷處理跳出<a class="headerlink" href="#id31" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">Loop5</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">3</span>
+    
+    <span class="n">Do</span> <span class="n">While</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">&lt;&gt;</span> <span class="s2">&quot;&quot;</span>
+      <span class="s1">&#39;myWeight = Cells(i, &quot;B&quot;).Value</span>
+       <span class="n">If</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">&lt;=</span> <span class="n">Cells</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="n">Then</span>
+          <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;達成!&quot;</span>
+          <span class="n">Exit</span> <span class="n">Do</span>
+       <span class="n">End</span> <span class="n">If</span>
+       <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="n">Loop</span>
+    
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">Loop6</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span>
+    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">3</span> <span class="n">To</span> <span class="mi">11</span>
+        <span class="n">Select</span> <span class="n">Case</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+            <span class="n">Case</span> <span class="s2">&quot;&quot;</span>
+                <span class="n">MsgBox</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Text</span> <span class="o">&amp;</span> <span class="s2">&quot;沒有數字!&quot;</span>
+                <span class="n">Exit</span> <span class="n">Sub</span>
+            <span class="n">Case</span> <span class="n">Is</span> <span class="o">&lt;=</span> <span class="n">Cells</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+                <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;達成!&quot;</span>
+                <span class="n">Exit</span> <span class="n">For</span>
+        <span class="n">End</span> <span class="n">Select</span>
+    <span class="n">Next</span>
+    <span class="n">MsgBox</span> <span class="s2">&quot;結束!!!&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id32">
+<h2>036 呼叫其他程序<a class="headerlink" href="#id32" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module2&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">雷達圖</span><span class="p">()</span>
+    <span class="n">Worksheets</span><span class="p">(</span><span class="s2">&quot;成績表&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Shapes</span><span class="o">.</span><span class="n">AddChart</span><span class="p">(</span><span class="n">xlRadarMarkers</span><span class="p">)</span><span class="o">.</span><span class="n">Select</span>
+    <span class="n">ActiveChart</span><span class="o">.</span><span class="n">Location</span> <span class="n">Where</span><span class="o">:=</span><span class="n">xlLocationAsNewSheet</span><span class="p">,</span> <span class="n">Name</span><span class="o">:=</span><span class="n">ActiveCell</span><span class="o">.</span><span class="n">Value</span>
+    <span class="n">Worksheets</span><span class="p">(</span><span class="s2">&quot;成績表&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Activate</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">做成成績圖表</span><span class="p">()</span>
+    <span class="n">Worksheets</span><span class="p">(</span><span class="s2">&quot;成績表&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3:F4&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Select</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A4&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Activate</span>
+    <span class="n">雷達圖</span>
+    <span class="n">Worksheets</span><span class="p">(</span><span class="s2">&quot;成績表&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3:F3, A5:F5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Select</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Activate</span>
+    <span class="n">雷達圖</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id33">
+<h2>037 傳遞引數到子程序<a class="headerlink" href="#id33" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module2&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">雷達圖</span><span class="p">(</span><span class="n">gData</span> <span class="n">As</span> <span class="n">Range</span><span class="p">,</span> <span class="n">gName</span> <span class="n">As</span> <span class="n">Range</span><span class="p">)</span>
+    <span class="n">Dim</span> <span class="n">gRange</span> <span class="n">As</span> <span class="n">Range</span>
+    <span class="n">Set</span> <span class="n">gRange</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">Union</span><span class="p">(</span><span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3:F3&quot;</span><span class="p">),</span> <span class="n">gData</span><span class="p">)</span>
+    
+    <span class="n">gRange</span><span class="o">.</span><span class="n">Select</span>
+    <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">Shapes</span><span class="o">.</span><span class="n">AddChart</span><span class="p">(</span><span class="n">xlRadarMarkers</span><span class="p">)</span><span class="o">.</span><span class="n">Select</span>
+    <span class="n">ActiveChart</span><span class="o">.</span><span class="n">Location</span> <span class="n">Where</span><span class="o">:=</span><span class="n">xlLocationAsNewSheet</span><span class="p">,</span> <span class="n">Name</span><span class="o">:=</span><span class="n">gName</span><span class="o">.</span><span class="n">Value</span>
+    <span class="n">Worksheets</span><span class="p">(</span><span class="s2">&quot;成績表&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Activate</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">做成成績圖表</span><span class="p">()</span>
+    <span class="n">雷達圖</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A4:F4&quot;</span><span class="p">),</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A4&quot;</span><span class="p">)</span>
+    <span class="n">雷達圖</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A5:F5&quot;</span><span class="p">),</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A5&quot;</span><span class="p">)</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id34">
+<h2>038 傳值呼叫和傳址呼叫<a class="headerlink" href="#id34" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">ByValTest</span><span class="p">(</span><span class="n">ByVal</span> <span class="n">xString</span> <span class="n">As</span> <span class="n">String</span><span class="p">)</span>
+    <span class="n">xString</span> <span class="o">=</span> <span class="s2">&quot;Window Vista&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">ByRefTest</span><span class="p">(</span><span class="n">ByRef</span> <span class="n">yString</span> <span class="n">As</span> <span class="n">String</span><span class="p">)</span>
+    <span class="n">yString</span> <span class="o">=</span> <span class="s2">&quot;Window Vista&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">Test</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">Hensu</span> <span class="n">As</span> <span class="n">String</span>
+    <span class="n">Hensu</span> <span class="o">=</span> <span class="s2">&quot;ExcelVBA&quot;</span>
+    <span class="n">Call</span> <span class="n">ByValTest</span><span class="p">(</span><span class="n">Hensu</span><span class="p">)</span>
+    <span class="n">MsgBox</span> <span class="s2">&quot;傳值呼叫的結果:&quot;</span> <span class="o">&amp;</span> <span class="n">Hensu</span>
+    <span class="n">Hensu</span> <span class="o">=</span> <span class="s2">&quot;ExcelVBA&quot;</span>
+    <span class="n">Call</span> <span class="n">ByRefTest</span><span class="p">(</span><span class="n">Hensu</span><span class="p">)</span>
+    <span class="n">MsgBox</span> <span class="s2">&quot;傳址呼叫的結果:&quot;</span> <span class="o">&amp;</span> <span class="n">Hensu</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id35">
+<h2>039 呼叫其他活頁簿的程序<a class="headerlink" href="#id35" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">呼叫其他活頁簿的程序</span><span class="p">()</span>
+    <span class="n">Workbooks</span><span class="o">.</span><span class="n">Open</span> <span class="s2">&quot;C:\ExcelVBA\Book1.xls&quot;</span>
+    <span class="n">Application</span><span class="o">.</span><span class="n">Run</span> <span class="s2">&quot;Book1.xls!Sample&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">呼叫其他活頁簿的程序2</span><span class="p">()</span>
+    <span class="n">Application</span><span class="o">.</span><span class="n">Run</span> <span class="s2">&quot;&#39;C:\ExcelVBA\Book1.xls&#39;!Sample&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id36">
+<h2>040 在指定時間執行程序<a class="headerlink" href="#id36" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">開始</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;F3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Activate</span>
+    <span class="n">MsgBox</span> <span class="s2">&quot;出現僅10秒!! 請輸入相同數字!!&quot;</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B3:D5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">Color</span> <span class="o">=</span> <span class="n">xlNone</span>
+    <span class="n">Application</span><span class="o">.</span><span class="n">OnTime</span> <span class="n">Now</span> <span class="o">+</span> <span class="n">TimeValue</span><span class="p">(</span><span class="s2">&quot;00:00:10&quot;</span><span class="p">),</span> <span class="s2">&quot;結束&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">結束</span><span class="p">()</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B3:D5&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Interior</span><span class="o">.</span><span class="n">Color</span> <span class="o">=</span> <span class="n">RGB</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">MsgBox</span> <span class="s2">&quot;已經過10秒!! 請問輸入多少數字???&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id37">
+<h2>041 發生錯誤時正常結束<a class="headerlink" href="#id37" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">錯誤處理</span><span class="p">()</span>
+  <span class="n">On</span> <span class="n">Error</span> <span class="n">GoTo</span> <span class="n">errHandler</span>
+  <span class="n">Dim</span> <span class="n">bName</span> <span class="n">As</span> <span class="n">String</span>
+  
+  <span class="n">bName</span> <span class="o">=</span> <span class="s2">&quot;C:\ ExcelVBA\Book1.xls&quot;</span>
+  <span class="n">Workbooks</span><span class="o">.</span><span class="n">Open</span> <span class="n">bName</span>
+  
+  <span class="n">Exit</span> <span class="n">Sub</span>
+<span class="n">errHandler</span><span class="p">:</span>
+  <span class="n">MsgBox</span> <span class="s2">&quot;找不到檔案&quot;</span> <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">_</span>
+          <span class="s2">&quot;檔案名稱:&quot;</span> <span class="o">&amp;</span> <span class="n">bName</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">錯誤處理2</span><span class="p">()</span>
+    <span class="n">On</span> <span class="n">Error</span> <span class="n">GoTo</span> <span class="n">errHandler</span>
+    <span class="n">Dim</span> <span class="n">bName</span> <span class="n">As</span> <span class="n">String</span>
+    
+    <span class="n">bName</span> <span class="o">=</span> <span class="s2">&quot;C:\ExcelVBA\Book1.xls&quot;</span>
+    <span class="n">Workbooks</span><span class="o">.</span><span class="n">Open</span> <span class="n">bName</span>
+    
+    <span class="n">Exit</span> <span class="n">Sub</span>
+<span class="n">errHandler</span><span class="p">:</span>
+        <span class="n">MsgBox</span> <span class="s2">&quot;找不到檔案&quot;</span> <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">_</span>
+        <span class="n">Err</span><span class="o">.</span><span class="n">Number</span> <span class="o">&amp;</span> <span class="s2">&quot; : &quot;</span> <span class="o">&amp;</span> <span class="n">Err</span><span class="o">.</span><span class="n">Description</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id38">
+<h2>042 錯誤處理後要續執行程式<a class="headerlink" href="#id38" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">處理後再開始</span><span class="p">()</span>
+  <span class="n">On</span> <span class="n">Error</span> <span class="n">GoTo</span> <span class="n">errHandler</span>
+  <span class="n">Dim</span> <span class="n">bName</span> <span class="n">As</span> <span class="n">String</span><span class="p">,</span> <span class="n">xFD</span> <span class="n">As</span> <span class="n">FileDialog</span>
+  <span class="n">bName</span> <span class="o">=</span> <span class="s2">&quot;C:\ ExcelVBA\Book1.xls&quot;</span>
+  <span class="n">Workbooks</span><span class="o">.</span><span class="n">Open</span> <span class="n">bName</span>
+  <span class="n">Exit</span> <span class="n">Sub</span>
+<span class="n">errHandler</span><span class="p">:</span>
+    <span class="n">Set</span> <span class="n">xFD</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">FileDialog</span><span class="p">(</span><span class="n">msoFileDialogOpen</span><span class="p">)</span>
+    <span class="n">If</span> <span class="n">xFD</span><span class="o">.</span><span class="n">Show</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">Then</span> <span class="n">Exit</span> <span class="n">Sub</span>
+    <span class="n">xFD</span><span class="o">.</span><span class="n">Execute</span>
+    <span class="n">Set</span> <span class="n">xFD</span> <span class="o">=</span> <span class="n">Nothing</span>
+    <span class="n">Resume</span> <span class="n">Next</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id39">
+<h2>043 檢查程式時確認變數或屬性的值<a class="headerlink" href="#id39" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">GyoBunKatsu</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myArray</span><span class="p">()</span> <span class="n">As</span> <span class="n">String</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span>
+    
+    <span class="n">myArray</span> <span class="o">=</span> <span class="n">Split</span><span class="p">(</span><span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">),</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">To</span> <span class="n">UBound</span><span class="p">(</span><span class="n">myArray</span><span class="p">)</span>
+        <span class="n">Cells</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">myArray</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">Next</span> <span class="n">i</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id40">
+<h2>044 檢查程式時輸出變數或屬性的值<a class="headerlink" href="#id40" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">DebugTest</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">xData</span> <span class="n">As</span> <span class="n">String</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span>
+    
+    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="n">To</span> <span class="mi">12</span>
+        <span class="n">xData</span> <span class="o">=</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+        <span class="n">Debug</span><span class="o">.</span><span class="n">Print</span> <span class="n">i</span> <span class="o">&amp;</span> <span class="s2">&quot; : &quot;</span> <span class="o">&amp;</span> <span class="n">xData</span>
+    <span class="n">Next</span> <span class="n">i</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">Welcome to your Jupyter Book</a>
+    <a class='right-next' id="next-link" href="ch02_%E5%84%B2%E5%AD%98%E6%A0%BC.html" title="next page">Ch02 儲存格</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book Community<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

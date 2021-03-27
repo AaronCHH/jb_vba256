@@ -1,0 +1,1346 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ch13 使用者表單 &#8212; My sample book</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Ch14 外部資料操作與其他" href="ch14_%E5%A4%96%E9%83%A8%E8%B3%87%E6%96%99%E6%93%8D%E4%BD%9C%E8%88%87%E5%85%B6%E4%BB%96.html" />
+    <link rel="prev" title="Ch12 圖表、圖案" href="ch12_%E5%9C%96%E8%A1%A8%E5%9C%96%E6%A1%88.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">My sample book</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch01_%E5%9F%BA%E6%9C%AC.html">
+   Ch01 基本
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch02_%E5%84%B2%E5%AD%98%E6%A0%BC.html">
+   Ch02 儲存格
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch03_%E8%B3%87%E6%96%99%E6%93%8D%E4%BD%9C.html">
+   Ch03 資料操作
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch04_%E5%B7%A5%E4%BD%9C%E8%A1%A8.html">
+   Ch04 工作表
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch05_%E6%B4%BB%E9%A0%81%E7%B0%BF.html">
+   Ch05 活頁簿
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch06_%E6%AA%94%E6%A1%88.html">
+   Ch06 檔案
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch07_%E8%A6%96%E7%AA%97.html">
+   Ch07 視窗
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch08_%E5%88%97%E5%8D%B0.html">
+   Ch08 列印
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch09_%E7%9B%AE%E6%9C%9F%E6%99%82%E9%96%93%E5%87%BD%E6%95%B8.html">
+   Ch09 日期時間函數
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch10_%E6%96%87%E5%AD%97%E6%93%8D%E4%BD%9C%E5%87%BD%E6%95%B8.html">
+   Ch10 文字操作函數
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch11_%E5%85%B6%E4%BB%96%E5%87%BD%E6%95%B8.html">
+   Ch11 其他函數
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch12_%E5%9C%96%E8%A1%A8%E5%9C%96%E6%A1%88.html">
+   Ch12 圖表、圖案
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Ch13 使用者表單
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch14_%E5%A4%96%E9%83%A8%E8%B3%87%E6%96%99%E6%93%8D%E4%BD%9C%E8%88%87%E5%85%B6%E4%BB%96.html">
+   Ch14 外部資料操作與其他
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/ch13_使用者表單.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fch13_使用者表單.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   230 建立自訂表單
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   231 顯示自訂表單
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   232 建立顯示表單的按鈕
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   233 關閉表單
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   234 讓表單的關閉鈕無效
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   235 在表單上顯示文字
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   236 鍵入文字
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id8">
+   237 按下按鈕執行處理
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id9">
+   238 選項按鈕的選擇值
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id10">
+   239 使用核取方塊選擇值
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id11">
+   240 將儲存格範圍的值填入下拉式清單方塊中顯示
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id12">
+   241 從下拉式清單方塊中取得選擇的值
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id13">
+   242 設定清單方塊中的顯示清單
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id14">
+   243 從清單方塊中取得選擇的值
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id15">
+   244 可以增減顯示數值的按鈕
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id16">
+   245 載入圖像
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="ch13">
+<h1>Ch13 使用者表單<a class="headerlink" href="#ch13" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>230 建立自訂表單<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">顯示表單</span><span class="p">()</span>
+    <span class="n">UserForm1</span><span class="o">.</span><span class="n">Show</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VERSION</span> <span class="mf">5.00</span>
+<span class="n">Begin</span> <span class="p">{</span><span class="n">C62A69F0</span><span class="o">-</span><span class="mi">16</span><span class="n">DC</span><span class="o">-</span><span class="mi">11</span><span class="n">CE</span><span class="o">-</span><span class="mf">9E98</span><span class="o">-</span><span class="mi">00</span><span class="n">AA00574A4F</span><span class="p">}</span> <span class="n">UserForm1</span> 
+   <span class="n">Caption</span>         <span class="o">=</span>   <span class="s2">&quot;會員登錄&quot;</span>
+   <span class="n">ClientHeight</span>    <span class="o">=</span>   <span class="mi">3120</span>
+   <span class="n">ClientLeft</span>      <span class="o">=</span>   <span class="mi">45</span>
+   <span class="n">ClientTop</span>       <span class="o">=</span>   <span class="mi">435</span>
+   <span class="n">ClientWidth</span>     <span class="o">=</span>   <span class="mi">4710</span>
+   <span class="n">OleObjectBlob</span>   <span class="o">=</span>   <span class="s2">&quot;UserForm1.frx&quot;</span><span class="p">:</span><span class="mi">0000</span>
+   <span class="n">StartUpPosition</span> <span class="o">=</span>   <span class="mi">1</span>  <span class="s1">&#39;CenterOwner</span>
+<span class="n">End</span>
+<span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;UserForm1&quot;</span>
+<span class="n">Attribute</span> <span class="n">VB_GlobalNameSpace</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_Creatable</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_PredeclaredId</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">Attribute</span> <span class="n">VB_Exposed</span> <span class="o">=</span> <span class="kc">False</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>231 顯示自訂表單<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">顯示表單</span><span class="p">()</span>
+    <span class="n">UserForm1</span><span class="o">.</span><span class="n">Show</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VERSION</span> <span class="mf">5.00</span>
+<span class="n">Begin</span> <span class="p">{</span><span class="n">C62A69F0</span><span class="o">-</span><span class="mi">16</span><span class="n">DC</span><span class="o">-</span><span class="mi">11</span><span class="n">CE</span><span class="o">-</span><span class="mf">9E98</span><span class="o">-</span><span class="mi">00</span><span class="n">AA00574A4F</span><span class="p">}</span> <span class="n">UserForm1</span> 
+   <span class="n">Caption</span>         <span class="o">=</span>   <span class="s2">&quot;會員登錄&quot;</span>
+   <span class="n">ClientHeight</span>    <span class="o">=</span>   <span class="mi">3120</span>
+   <span class="n">ClientLeft</span>      <span class="o">=</span>   <span class="mi">45</span>
+   <span class="n">ClientTop</span>       <span class="o">=</span>   <span class="mi">435</span>
+   <span class="n">ClientWidth</span>     <span class="o">=</span>   <span class="mi">4710</span>
+   <span class="n">OleObjectBlob</span>   <span class="o">=</span>   <span class="s2">&quot;UserForm1.frx&quot;</span><span class="p">:</span><span class="mi">0000</span>
+   <span class="n">StartUpPosition</span> <span class="o">=</span>   <span class="mi">1</span>  <span class="s1">&#39;CenterOwner</span>
+<span class="n">End</span>
+<span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;UserForm1&quot;</span>
+<span class="n">Attribute</span> <span class="n">VB_GlobalNameSpace</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_Creatable</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_PredeclaredId</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">Attribute</span> <span class="n">VB_Exposed</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>232 建立顯示表單的按鈕<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">顯示表單</span><span class="p">()</span>
+    <span class="n">UserForm1</span><span class="o">.</span><span class="n">Show</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VERSION</span> <span class="mf">5.00</span>
+<span class="n">Begin</span> <span class="p">{</span><span class="n">C62A69F0</span><span class="o">-</span><span class="mi">16</span><span class="n">DC</span><span class="o">-</span><span class="mi">11</span><span class="n">CE</span><span class="o">-</span><span class="mf">9E98</span><span class="o">-</span><span class="mi">00</span><span class="n">AA00574A4F</span><span class="p">}</span> <span class="n">UserForm1</span> 
+   <span class="n">Caption</span>         <span class="o">=</span>   <span class="s2">&quot;會員登錄&quot;</span>
+   <span class="n">ClientHeight</span>    <span class="o">=</span>   <span class="mi">3120</span>
+   <span class="n">ClientLeft</span>      <span class="o">=</span>   <span class="mi">45</span>
+   <span class="n">ClientTop</span>       <span class="o">=</span>   <span class="mi">435</span>
+   <span class="n">ClientWidth</span>     <span class="o">=</span>   <span class="mi">4710</span>
+   <span class="n">OleObjectBlob</span>   <span class="o">=</span>   <span class="s2">&quot;UserForm1.frx&quot;</span><span class="p">:</span><span class="mi">0000</span>
+   <span class="n">StartUpPosition</span> <span class="o">=</span>   <span class="mi">1</span>  <span class="s1">&#39;CenterOwner</span>
+<span class="n">End</span>
+<span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;UserForm1&quot;</span>
+<span class="n">Attribute</span> <span class="n">VB_GlobalNameSpace</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_Creatable</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_PredeclaredId</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">Attribute</span> <span class="n">VB_Exposed</span> <span class="o">=</span> <span class="kc">False</span>
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>233 關閉表單<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">顯示表單</span><span class="p">()</span>
+    <span class="n">UserForm1</span><span class="o">.</span><span class="n">Show</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VERSION</span> <span class="mf">5.00</span>
+<span class="n">Begin</span> <span class="p">{</span><span class="n">C62A69F0</span><span class="o">-</span><span class="mi">16</span><span class="n">DC</span><span class="o">-</span><span class="mi">11</span><span class="n">CE</span><span class="o">-</span><span class="mf">9E98</span><span class="o">-</span><span class="mi">00</span><span class="n">AA00574A4F</span><span class="p">}</span> <span class="n">UserForm1</span> 
+   <span class="n">Caption</span>         <span class="o">=</span>   <span class="s2">&quot;會員登錄&quot;</span>
+   <span class="n">ClientHeight</span>    <span class="o">=</span>   <span class="mi">3120</span>
+   <span class="n">ClientLeft</span>      <span class="o">=</span>   <span class="mi">45</span>
+   <span class="n">ClientTop</span>       <span class="o">=</span>   <span class="mi">435</span>
+   <span class="n">ClientWidth</span>     <span class="o">=</span>   <span class="mi">4710</span>
+   <span class="n">OleObjectBlob</span>   <span class="o">=</span>   <span class="s2">&quot;UserForm1.frx&quot;</span><span class="p">:</span><span class="mi">0000</span>
+   <span class="n">StartUpPosition</span> <span class="o">=</span>   <span class="mi">1</span>  <span class="s1">&#39;CenterOwner</span>
+<span class="n">End</span>
+<span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;UserForm1&quot;</span>
+<span class="n">Attribute</span> <span class="n">VB_GlobalNameSpace</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_Creatable</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_PredeclaredId</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">Attribute</span> <span class="n">VB_Exposed</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">CommandButton1_Click</span><span class="p">()</span>
+    <span class="n">Unload</span> <span class="n">Me</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>234 讓表單的關閉鈕無效<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">顯示表單</span><span class="p">()</span>
+    <span class="n">UserForm1</span><span class="o">.</span><span class="n">Show</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VERSION</span> <span class="mf">5.00</span>
+<span class="n">Begin</span> <span class="p">{</span><span class="n">C62A69F0</span><span class="o">-</span><span class="mi">16</span><span class="n">DC</span><span class="o">-</span><span class="mi">11</span><span class="n">CE</span><span class="o">-</span><span class="mf">9E98</span><span class="o">-</span><span class="mi">00</span><span class="n">AA00574A4F</span><span class="p">}</span> <span class="n">UserForm1</span> 
+   <span class="n">Caption</span>         <span class="o">=</span>   <span class="s2">&quot;會員登錄&quot;</span>
+   <span class="n">ClientHeight</span>    <span class="o">=</span>   <span class="mi">3120</span>
+   <span class="n">ClientLeft</span>      <span class="o">=</span>   <span class="mi">45</span>
+   <span class="n">ClientTop</span>       <span class="o">=</span>   <span class="mi">435</span>
+   <span class="n">ClientWidth</span>     <span class="o">=</span>   <span class="mi">4710</span>
+   <span class="n">OleObjectBlob</span>   <span class="o">=</span>   <span class="s2">&quot;UserForm1.frx&quot;</span><span class="p">:</span><span class="mi">0000</span>
+   <span class="n">StartUpPosition</span> <span class="o">=</span>   <span class="mi">1</span>  <span class="s1">&#39;CenterOwner</span>
+<span class="n">End</span>
+<span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;UserForm1&quot;</span>
+<span class="n">Attribute</span> <span class="n">VB_GlobalNameSpace</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_Creatable</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_PredeclaredId</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">Attribute</span> <span class="n">VB_Exposed</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">CommandButton1_Click</span><span class="p">()</span>
+    <span class="n">Unload</span> <span class="n">Me</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">UserForm_QueryClose</span><span class="p">(</span><span class="n">Cancel</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">CloseMode</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">)</span>
+    <span class="n">If</span> <span class="n">CloseMode</span> <span class="o">=</span> <span class="n">vbFormControlMenu</span> <span class="n">Then</span>
+       <span class="n">MsgBox</span> <span class="s2">&quot;X按鈕無效!!&quot;</span>
+       <span class="n">Cancel</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">End</span> <span class="n">If</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>235 在表單上顯示文字<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">顯示表單</span><span class="p">()</span>
+    <span class="n">UserForm1</span><span class="o">.</span><span class="n">Show</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VERSION</span> <span class="mf">5.00</span>
+<span class="n">Begin</span> <span class="p">{</span><span class="n">C62A69F0</span><span class="o">-</span><span class="mi">16</span><span class="n">DC</span><span class="o">-</span><span class="mi">11</span><span class="n">CE</span><span class="o">-</span><span class="mf">9E98</span><span class="o">-</span><span class="mi">00</span><span class="n">AA00574A4F</span><span class="p">}</span> <span class="n">UserForm1</span> 
+   <span class="n">Caption</span>         <span class="o">=</span>   <span class="s2">&quot;會員登錄&quot;</span>
+   <span class="n">ClientHeight</span>    <span class="o">=</span>   <span class="mi">3120</span>
+   <span class="n">ClientLeft</span>      <span class="o">=</span>   <span class="mi">45</span>
+   <span class="n">ClientTop</span>       <span class="o">=</span>   <span class="mi">435</span>
+   <span class="n">ClientWidth</span>     <span class="o">=</span>   <span class="mi">4710</span>
+   <span class="n">OleObjectBlob</span>   <span class="o">=</span>   <span class="s2">&quot;UserForm1.frx&quot;</span><span class="p">:</span><span class="mi">0000</span>
+   <span class="n">StartUpPosition</span> <span class="o">=</span>   <span class="mi">1</span>  <span class="s1">&#39;CenterOwner</span>
+<span class="n">End</span>
+<span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;UserForm1&quot;</span>
+<span class="n">Attribute</span> <span class="n">VB_GlobalNameSpace</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_Creatable</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_PredeclaredId</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">Attribute</span> <span class="n">VB_Exposed</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">CommandButton1_Click</span><span class="p">()</span>
+    <span class="n">Unload</span> <span class="n">Me</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">UserForm_Initialize</span><span class="p">()</span>
+    <span class="n">Label1</span><span class="o">.</span><span class="n">Caption</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">Label2</span><span class="o">.</span><span class="n">Caption</span> <span class="o">=</span> <span class="n">Date</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">UserForm_QueryClose</span><span class="p">(</span><span class="n">Cancel</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">CloseMode</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">)</span>
+    <span class="n">If</span> <span class="n">CloseMode</span> <span class="o">=</span> <span class="n">vbFormControlMenu</span> <span class="n">Then</span>
+       <span class="n">MsgBox</span> <span class="s2">&quot;X按鈕無效!!&quot;</span>
+       <span class="n">Cancel</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">End</span> <span class="n">If</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>236 鍵入文字<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">顯示表單</span><span class="p">()</span>
+    <span class="n">UserForm1</span><span class="o">.</span><span class="n">Show</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VERSION</span> <span class="mf">5.00</span>
+<span class="n">Begin</span> <span class="p">{</span><span class="n">C62A69F0</span><span class="o">-</span><span class="mi">16</span><span class="n">DC</span><span class="o">-</span><span class="mi">11</span><span class="n">CE</span><span class="o">-</span><span class="mf">9E98</span><span class="o">-</span><span class="mi">00</span><span class="n">AA00574A4F</span><span class="p">}</span> <span class="n">UserForm1</span> 
+   <span class="n">Caption</span>         <span class="o">=</span>   <span class="s2">&quot;會員登錄&quot;</span>
+   <span class="n">ClientHeight</span>    <span class="o">=</span>   <span class="mi">3120</span>
+   <span class="n">ClientLeft</span>      <span class="o">=</span>   <span class="mi">45</span>
+   <span class="n">ClientTop</span>       <span class="o">=</span>   <span class="mi">435</span>
+   <span class="n">ClientWidth</span>     <span class="o">=</span>   <span class="mi">4710</span>
+   <span class="n">OleObjectBlob</span>   <span class="o">=</span>   <span class="s2">&quot;UserForm1.frx&quot;</span><span class="p">:</span><span class="mi">0000</span>
+   <span class="n">StartUpPosition</span> <span class="o">=</span>   <span class="mi">1</span>  <span class="s1">&#39;CenterOwner</span>
+<span class="n">End</span>
+<span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;UserForm1&quot;</span>
+<span class="n">Attribute</span> <span class="n">VB_GlobalNameSpace</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_Creatable</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_PredeclaredId</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">Attribute</span> <span class="n">VB_Exposed</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">CommandButton1_Click</span><span class="p">()</span>
+    <span class="n">Unload</span> <span class="n">Me</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">CommandButton2_Click</span><span class="p">()</span>
+    <span class="n">Cells</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">TextBox1</span><span class="o">.</span><span class="n">Text</span>
+    <span class="n">Cells</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">TextBox2</span><span class="o">.</span><span class="n">Text</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">UserForm_Initialize</span><span class="p">()</span>
+    <span class="n">Label1</span><span class="o">.</span><span class="n">Caption</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">Label2</span><span class="o">.</span><span class="n">Caption</span> <span class="o">=</span> <span class="n">Date</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">UserForm_QueryClose</span><span class="p">(</span><span class="n">Cancel</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">CloseMode</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">)</span>
+    <span class="n">If</span> <span class="n">CloseMode</span> <span class="o">=</span> <span class="n">vbFormControlMenu</span> <span class="n">Then</span>
+       <span class="n">MsgBox</span> <span class="s2">&quot;X按鈕無效!!&quot;</span>
+       <span class="n">Cancel</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">End</span> <span class="n">If</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>237 按下按鈕執行處理<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">顯示表單</span><span class="p">()</span>
+    <span class="n">UserForm1</span><span class="o">.</span><span class="n">Show</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VERSION</span> <span class="mf">5.00</span>
+<span class="n">Begin</span> <span class="p">{</span><span class="n">C62A69F0</span><span class="o">-</span><span class="mi">16</span><span class="n">DC</span><span class="o">-</span><span class="mi">11</span><span class="n">CE</span><span class="o">-</span><span class="mf">9E98</span><span class="o">-</span><span class="mi">00</span><span class="n">AA00574A4F</span><span class="p">}</span> <span class="n">UserForm1</span> 
+   <span class="n">Caption</span>         <span class="o">=</span>   <span class="s2">&quot;·|­ûµn¿ý&quot;</span>
+   <span class="n">ClientHeight</span>    <span class="o">=</span>   <span class="mi">3120</span>
+   <span class="n">ClientLeft</span>      <span class="o">=</span>   <span class="mi">45</span>
+   <span class="n">ClientTop</span>       <span class="o">=</span>   <span class="mi">435</span>
+   <span class="n">ClientWidth</span>     <span class="o">=</span>   <span class="mi">4710</span>
+   <span class="n">OleObjectBlob</span>   <span class="o">=</span>   <span class="s2">&quot;UserForm1.frx&quot;</span><span class="p">:</span><span class="mi">0000</span>
+   <span class="n">StartUpPosition</span> <span class="o">=</span>   <span class="mi">1</span>  <span class="s1">&#39;CenterOwner</span>
+<span class="n">End</span>
+<span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;UserForm1&quot;</span>
+<span class="n">Attribute</span> <span class="n">VB_GlobalNameSpace</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_Creatable</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_PredeclaredId</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">Attribute</span> <span class="n">VB_Exposed</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">CommandButton1_Click</span><span class="p">()</span>
+    <span class="n">Unload</span> <span class="n">Me</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">CommandButton2_Click</span><span class="p">()</span>
+    <span class="n">Cells</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">Label1</span><span class="o">.</span><span class="n">Caption</span>
+    <span class="n">Cells</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">Label2</span><span class="o">.</span><span class="n">Caption</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">UserForm_Initialize</span><span class="p">()</span>
+    <span class="n">Label1</span><span class="o">.</span><span class="n">Caption</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">Label2</span><span class="o">.</span><span class="n">Caption</span> <span class="o">=</span> <span class="n">Date</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>238 選項按鈕的選擇值<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">顯示表單</span><span class="p">()</span>
+    <span class="n">UserForm1</span><span class="o">.</span><span class="n">Show</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VERSION</span> <span class="mf">5.00</span>
+<span class="n">Begin</span> <span class="p">{</span><span class="n">C62A69F0</span><span class="o">-</span><span class="mi">16</span><span class="n">DC</span><span class="o">-</span><span class="mi">11</span><span class="n">CE</span><span class="o">-</span><span class="mf">9E98</span><span class="o">-</span><span class="mi">00</span><span class="n">AA00574A4F</span><span class="p">}</span> <span class="n">UserForm1</span> 
+   <span class="n">Caption</span>         <span class="o">=</span>   <span class="s2">&quot;會員登錄&quot;</span>
+   <span class="n">ClientHeight</span>    <span class="o">=</span>   <span class="mi">3120</span>
+   <span class="n">ClientLeft</span>      <span class="o">=</span>   <span class="mi">45</span>
+   <span class="n">ClientTop</span>       <span class="o">=</span>   <span class="mi">435</span>
+   <span class="n">ClientWidth</span>     <span class="o">=</span>   <span class="mi">4710</span>
+   <span class="n">OleObjectBlob</span>   <span class="o">=</span>   <span class="s2">&quot;UserForm1.frx&quot;</span><span class="p">:</span><span class="mi">0000</span>
+   <span class="n">StartUpPosition</span> <span class="o">=</span>   <span class="mi">1</span>  <span class="s1">&#39;CenterOwner</span>
+<span class="n">End</span>
+<span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;UserForm1&quot;</span>
+<span class="n">Attribute</span> <span class="n">VB_GlobalNameSpace</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_Creatable</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_PredeclaredId</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">Attribute</span> <span class="n">VB_Exposed</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">CommandButton1_Click</span><span class="p">()</span>
+    <span class="n">Unload</span> <span class="n">Me</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">CommandButton2_Click</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">opt</span> <span class="n">As</span> <span class="n">Control</span><span class="p">,</span> <span class="n">flg</span> <span class="n">As</span> <span class="n">Boolean</span>
+    <span class="n">flg</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">For</span> <span class="n">Each</span> <span class="n">opt</span> <span class="n">In</span> <span class="n">Frame1</span><span class="o">.</span><span class="n">Controls</span>
+        <span class="n">If</span> <span class="n">opt</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="kc">True</span> <span class="n">Then</span>
+           <span class="n">flg</span> <span class="o">=</span> <span class="kc">True</span>
+           <span class="n">Cells</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">opt</span><span class="o">.</span><span class="n">Caption</span>
+        <span class="n">End</span> <span class="n">If</span>
+    <span class="n">Next</span>
+    <span class="n">If</span> <span class="n">flg</span> <span class="o">=</span> <span class="kc">False</span> <span class="n">Then</span> <span class="n">MsgBox</span> <span class="s2">&quot;請選擇性別!!!&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">TextBox1_Change</span><span class="p">()</span>
+    <span class="n">TextBox2</span><span class="o">.</span><span class="n">Text</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">GetPhonetic</span><span class="p">(</span><span class="n">TextBox1</span><span class="o">.</span><span class="n">Text</span><span class="p">)</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">UserForm_Initialize</span><span class="p">()</span>
+    <span class="n">Label1</span><span class="o">.</span><span class="n">Caption</span> <span class="o">=</span> <span class="mi">1</span>
+   <span class="s1">&#39;Label2.Caption = Date</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>239 使用核取方塊選擇值<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">顯示表單</span><span class="p">()</span>
+    <span class="n">UserForm1</span><span class="o">.</span><span class="n">Show</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VERSION</span> <span class="mf">5.00</span>
+<span class="n">Begin</span> <span class="p">{</span><span class="n">C62A69F0</span><span class="o">-</span><span class="mi">16</span><span class="n">DC</span><span class="o">-</span><span class="mi">11</span><span class="n">CE</span><span class="o">-</span><span class="mf">9E98</span><span class="o">-</span><span class="mi">00</span><span class="n">AA00574A4F</span><span class="p">}</span> <span class="n">UserForm1</span> 
+   <span class="n">Caption</span>         <span class="o">=</span>   <span class="s2">&quot;·|­ûµn¿ý&quot;</span>
+   <span class="n">ClientHeight</span>    <span class="o">=</span>   <span class="mi">3120</span>
+   <span class="n">ClientLeft</span>      <span class="o">=</span>   <span class="mi">45</span>
+   <span class="n">ClientTop</span>       <span class="o">=</span>   <span class="mi">435</span>
+   <span class="n">ClientWidth</span>     <span class="o">=</span>   <span class="mi">4710</span>
+   <span class="n">OleObjectBlob</span>   <span class="o">=</span>   <span class="s2">&quot;UserForm1.frx&quot;</span><span class="p">:</span><span class="mi">0000</span>
+   <span class="n">StartUpPosition</span> <span class="o">=</span>   <span class="mi">1</span>  <span class="s1">&#39;CenterOwner</span>
+<span class="n">End</span>
+<span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;UserForm1&quot;</span>
+<span class="n">Attribute</span> <span class="n">VB_GlobalNameSpace</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_Creatable</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_PredeclaredId</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">Attribute</span> <span class="n">VB_Exposed</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">CommandButton1_Click</span><span class="p">()</span>
+    <span class="n">Unload</span> <span class="n">Me</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">CommandButton2_Click</span><span class="p">()</span>
+    <span class="n">Cells</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">CheckBox1</span><span class="o">.</span><span class="n">Value</span>
+    <span class="n">Cells</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">CheckBox2</span><span class="o">.</span><span class="n">Value</span>
+    <span class="n">Cells</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">CheckBox3</span><span class="o">.</span><span class="n">Value</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">TextBox1_Change</span><span class="p">()</span>
+    <span class="n">TextBox2</span><span class="o">.</span><span class="n">Text</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">GetPhonetic</span><span class="p">(</span><span class="n">TextBox1</span><span class="o">.</span><span class="n">Text</span><span class="p">)</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">UserForm_Initialize</span><span class="p">()</span>
+    <span class="n">Label1</span><span class="o">.</span><span class="n">Caption</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="s1">&#39;Label2.Caption = Date</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>240 將儲存格範圍的值填入下拉式清單方塊中顯示<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">顯示表單</span><span class="p">()</span>
+    <span class="n">UserForm1</span><span class="o">.</span><span class="n">Show</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>241 從下拉式清單方塊中取得選擇的值<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VERSION</span> <span class="mf">5.00</span>
+<span class="n">Begin</span> <span class="p">{</span><span class="n">C62A69F0</span><span class="o">-</span><span class="mi">16</span><span class="n">DC</span><span class="o">-</span><span class="mi">11</span><span class="n">CE</span><span class="o">-</span><span class="mf">9E98</span><span class="o">-</span><span class="mi">00</span><span class="n">AA00574A4F</span><span class="p">}</span> <span class="n">UserForm1</span> 
+   <span class="n">Caption</span>         <span class="o">=</span>   <span class="s2">&quot;會員登錄&quot;</span>
+   <span class="n">ClientHeight</span>    <span class="o">=</span>   <span class="mi">3120</span>
+   <span class="n">ClientLeft</span>      <span class="o">=</span>   <span class="mi">45</span>
+   <span class="n">ClientTop</span>       <span class="o">=</span>   <span class="mi">435</span>
+   <span class="n">ClientWidth</span>     <span class="o">=</span>   <span class="mi">4710</span>
+   <span class="n">OleObjectBlob</span>   <span class="o">=</span>   <span class="s2">&quot;UserForm1.frx&quot;</span><span class="p">:</span><span class="mi">0000</span>
+   <span class="n">StartUpPosition</span> <span class="o">=</span>   <span class="mi">1</span>  <span class="s1">&#39;CenterOwner</span>
+<span class="n">End</span>
+<span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;UserForm1&quot;</span>
+<span class="n">Attribute</span> <span class="n">VB_GlobalNameSpace</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_Creatable</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_PredeclaredId</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">Attribute</span> <span class="n">VB_Exposed</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">CommandButton1_Click</span><span class="p">()</span>
+    <span class="n">Unload</span> <span class="n">Me</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">CommandButton2_Click</span><span class="p">()</span>
+
+<span class="n">End</span> <span class="n">Sub</span>
+
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">UserForm_Initialize</span><span class="p">()</span>
+    <span class="n">Label1</span><span class="o">.</span><span class="n">Caption</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">ComboBox1</span><span class="o">.</span><span class="n">RowSource</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;縣市&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Address</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>242 設定清單方塊中的顯示清單<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">顯示表單</span><span class="p">()</span>
+    <span class="n">UserForm1</span><span class="o">.</span><span class="n">Show</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VERSION</span> <span class="mf">5.00</span>
+<span class="n">Begin</span> <span class="p">{</span><span class="n">C62A69F0</span><span class="o">-</span><span class="mi">16</span><span class="n">DC</span><span class="o">-</span><span class="mi">11</span><span class="n">CE</span><span class="o">-</span><span class="mf">9E98</span><span class="o">-</span><span class="mi">00</span><span class="n">AA00574A4F</span><span class="p">}</span> <span class="n">UserForm1</span> 
+   <span class="n">Caption</span>         <span class="o">=</span>   <span class="s2">&quot;會員登錄&quot;</span>
+   <span class="n">ClientHeight</span>    <span class="o">=</span>   <span class="mi">3120</span>
+   <span class="n">ClientLeft</span>      <span class="o">=</span>   <span class="mi">45</span>
+   <span class="n">ClientTop</span>       <span class="o">=</span>   <span class="mi">435</span>
+   <span class="n">ClientWidth</span>     <span class="o">=</span>   <span class="mi">4710</span>
+   <span class="n">OleObjectBlob</span>   <span class="o">=</span>   <span class="s2">&quot;UserForm1.frx&quot;</span><span class="p">:</span><span class="mi">0000</span>
+   <span class="n">StartUpPosition</span> <span class="o">=</span>   <span class="mi">1</span>  <span class="s1">&#39;CenterOwner</span>
+<span class="n">End</span>
+<span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;UserForm1&quot;</span>
+<span class="n">Attribute</span> <span class="n">VB_GlobalNameSpace</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_Creatable</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_PredeclaredId</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">Attribute</span> <span class="n">VB_Exposed</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">CommandButton1_Click</span><span class="p">()</span>
+    <span class="n">Unload</span> <span class="n">Me</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">TextBox1_Change</span><span class="p">()</span>
+    <span class="n">TextBox2</span><span class="o">.</span><span class="n">Text</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">GetPhonetic</span><span class="p">(</span><span class="n">TextBox1</span><span class="o">.</span><span class="n">Text</span><span class="p">)</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">UserForm_Initialize</span><span class="p">()</span>
+    <span class="n">Label1</span><span class="o">.</span><span class="n">Caption</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">ListBox1</span><span class="o">.</span><span class="n">AddItem</span> <span class="s2">&quot;打工&quot;</span>
+    <span class="n">ListBox1</span><span class="o">.</span><span class="n">AddItem</span> <span class="s2">&quot;上班族&quot;</span>
+    <span class="n">ListBox1</span><span class="o">.</span><span class="n">AddItem</span> <span class="s2">&quot;自營業&quot;</span>
+    <span class="n">ListBox1</span><span class="o">.</span><span class="n">AddItem</span> <span class="s2">&quot;主婦&quot;</span>
+    <span class="n">ListBox1</span><span class="o">.</span><span class="n">AddItem</span> <span class="s2">&quot;其他&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>243 從清單方塊中取得選擇的值<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">顯示表單</span><span class="p">()</span>
+    <span class="n">UserForm1</span><span class="o">.</span><span class="n">Show</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">顯示表單2</span><span class="p">()</span>
+    <span class="n">UserForm2</span><span class="o">.</span><span class="n">Show</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VERSION</span> <span class="mf">5.00</span>
+<span class="n">Begin</span> <span class="p">{</span><span class="n">C62A69F0</span><span class="o">-</span><span class="mi">16</span><span class="n">DC</span><span class="o">-</span><span class="mi">11</span><span class="n">CE</span><span class="o">-</span><span class="mf">9E98</span><span class="o">-</span><span class="mi">00</span><span class="n">AA00574A4F</span><span class="p">}</span> <span class="n">UserForm1</span> 
+   <span class="n">Caption</span>         <span class="o">=</span>   <span class="s2">&quot;會員登錄&quot;</span>
+   <span class="n">ClientHeight</span>    <span class="o">=</span>   <span class="mi">3120</span>
+   <span class="n">ClientLeft</span>      <span class="o">=</span>   <span class="mi">45</span>
+   <span class="n">ClientTop</span>       <span class="o">=</span>   <span class="mi">435</span>
+   <span class="n">ClientWidth</span>     <span class="o">=</span>   <span class="mi">4710</span>
+   <span class="n">OleObjectBlob</span>   <span class="o">=</span>   <span class="s2">&quot;UserForm1.frx&quot;</span><span class="p">:</span><span class="mi">0000</span>
+   <span class="n">StartUpPosition</span> <span class="o">=</span>   <span class="mi">1</span>  <span class="s1">&#39;CenterOwner</span>
+<span class="n">End</span>
+<span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;UserForm1&quot;</span>
+<span class="n">Attribute</span> <span class="n">VB_GlobalNameSpace</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_Creatable</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_PredeclaredId</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">Attribute</span> <span class="n">VB_Exposed</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">CommandButton1_Click</span><span class="p">()</span>
+    <span class="n">Unload</span> <span class="n">Me</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">CommandButton2_Click</span><span class="p">()</span>
+   
+   <span class="n">With</span> <span class="n">ListBox1</span>
+       <span class="n">If</span> <span class="o">.</span><span class="n">ListIndex</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="n">Then</span>
+           <span class="n">MsgBox</span> <span class="s2">&quot;請選擇職業!!&quot;</span>
+       <span class="n">Else</span>
+           <span class="n">Cells</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="o">.</span><span class="n">List</span><span class="p">(</span><span class="o">.</span><span class="n">ListIndex</span><span class="p">)</span>
+       <span class="n">End</span> <span class="n">If</span>
+   <span class="n">End</span> <span class="n">With</span>
+   
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">TextBox1_Change</span><span class="p">()</span>
+    <span class="n">TextBox2</span><span class="o">.</span><span class="n">Text</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">GetPhonetic</span><span class="p">(</span><span class="n">TextBox1</span><span class="o">.</span><span class="n">Text</span><span class="p">)</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">UserForm_Initialize</span><span class="p">()</span>
+
+   <span class="n">Label1</span><span class="o">.</span><span class="n">Caption</span> <span class="o">=</span> <span class="mi">1</span>
+   <span class="n">ListBox1</span><span class="o">.</span><span class="n">AddItem</span> <span class="s2">&quot;打工&quot;</span>
+   <span class="n">ListBox1</span><span class="o">.</span><span class="n">AddItem</span> <span class="s2">&quot;上班族&quot;</span>
+   <span class="n">ListBox1</span><span class="o">.</span><span class="n">AddItem</span> <span class="s2">&quot;自營業&quot;</span>
+   <span class="n">ListBox1</span><span class="o">.</span><span class="n">AddItem</span> <span class="s2">&quot;主婦&quot;</span>
+   <span class="n">ListBox1</span><span class="o">.</span><span class="n">AddItem</span> <span class="s2">&quot;其他&quot;</span>
+
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VERSION</span> <span class="mf">5.00</span>
+<span class="n">Begin</span> <span class="p">{</span><span class="n">C62A69F0</span><span class="o">-</span><span class="mi">16</span><span class="n">DC</span><span class="o">-</span><span class="mi">11</span><span class="n">CE</span><span class="o">-</span><span class="mf">9E98</span><span class="o">-</span><span class="mi">00</span><span class="n">AA00574A4F</span><span class="p">}</span> <span class="n">UserForm2</span> 
+   <span class="n">Caption</span>         <span class="o">=</span>   <span class="s2">&quot;希望類別&quot;</span>
+   <span class="n">ClientHeight</span>    <span class="o">=</span>   <span class="mi">3120</span>
+   <span class="n">ClientLeft</span>      <span class="o">=</span>   <span class="mi">45</span>
+   <span class="n">ClientTop</span>       <span class="o">=</span>   <span class="mi">435</span>
+   <span class="n">ClientWidth</span>     <span class="o">=</span>   <span class="mi">4710</span>
+   <span class="n">OleObjectBlob</span>   <span class="o">=</span>   <span class="s2">&quot;UserForm2.frx&quot;</span><span class="p">:</span><span class="mi">0000</span>
+   <span class="n">StartUpPosition</span> <span class="o">=</span>   <span class="mi">1</span>  <span class="s1">&#39;CenterOwner</span>
+<span class="n">End</span>
+<span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;UserForm2&quot;</span>
+<span class="n">Attribute</span> <span class="n">VB_GlobalNameSpace</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_Creatable</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_PredeclaredId</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">Attribute</span> <span class="n">VB_Exposed</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">CommandButton1_Click</span><span class="p">()</span>
+    <span class="n">Unload</span> <span class="n">Me</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">CommandButton2_Click</span><span class="p">()</span>
+      
+   <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">,</span> <span class="nb">str</span> <span class="n">As</span> <span class="n">String</span>
+   <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">To</span> <span class="n">ListBox1</span><span class="o">.</span><span class="n">ListCount</span> <span class="o">-</span> <span class="mi">1</span>
+       <span class="n">If</span> <span class="n">ListBox1</span><span class="o">.</span><span class="n">Selected</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="n">Then</span>
+          <span class="n">Cells</span><span class="p">(</span><span class="n">Rows</span><span class="o">.</span><span class="n">Count</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">End</span><span class="p">(</span><span class="n">xlUp</span><span class="p">)</span><span class="o">.</span><span class="n">Offset</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">ListBox1</span><span class="o">.</span><span class="n">List</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+       <span class="n">End</span> <span class="n">If</span>
+   <span class="n">Next</span>
+   
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">TextBox1_Change</span><span class="p">()</span>
+    <span class="n">TextBox2</span><span class="o">.</span><span class="n">Text</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">GetPhonetic</span><span class="p">(</span><span class="n">TextBox1</span><span class="o">.</span><span class="n">Text</span><span class="p">)</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">UserForm_Initialize</span><span class="p">()</span>
+
+   <span class="n">ListBox1</span><span class="o">.</span><span class="n">AddItem</span> <span class="s2">&quot;國語&quot;</span>
+   <span class="n">ListBox1</span><span class="o">.</span><span class="n">AddItem</span> <span class="s2">&quot;鄉村&quot;</span>
+   <span class="n">ListBox1</span><span class="o">.</span><span class="n">AddItem</span> <span class="s2">&quot;搖滾&quot;</span>
+   <span class="n">ListBox1</span><span class="o">.</span><span class="n">AddItem</span> <span class="s2">&quot;古典&quot;</span>
+   <span class="n">ListBox1</span><span class="o">.</span><span class="n">AddItem</span> <span class="s2">&quot;拉丁&quot;</span>
+   <span class="n">ListBox1</span><span class="o">.</span><span class="n">AddItem</span> <span class="s2">&quot;藍調&quot;</span>
+    
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id15">
+<h2>244 可以增減顯示數值的按鈕<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">顯示表單</span><span class="p">()</span>
+    <span class="n">UserForm1</span><span class="o">.</span><span class="n">Show</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">顯示表單2</span><span class="p">()</span>
+    <span class="n">UserForm2</span><span class="o">.</span><span class="n">Show</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VERSION</span> <span class="mf">5.00</span>
+<span class="n">Begin</span> <span class="p">{</span><span class="n">C62A69F0</span><span class="o">-</span><span class="mi">16</span><span class="n">DC</span><span class="o">-</span><span class="mi">11</span><span class="n">CE</span><span class="o">-</span><span class="mf">9E98</span><span class="o">-</span><span class="mi">00</span><span class="n">AA00574A4F</span><span class="p">}</span> <span class="n">UserForm1</span> 
+   <span class="n">Caption</span>         <span class="o">=</span>   <span class="s2">&quot;會員登錄&quot;</span>
+   <span class="n">ClientHeight</span>    <span class="o">=</span>   <span class="mi">3120</span>
+   <span class="n">ClientLeft</span>      <span class="o">=</span>   <span class="mi">45</span>
+   <span class="n">ClientTop</span>       <span class="o">=</span>   <span class="mi">435</span>
+   <span class="n">ClientWidth</span>     <span class="o">=</span>   <span class="mi">4710</span>
+   <span class="n">OleObjectBlob</span>   <span class="o">=</span>   <span class="s2">&quot;UserForm1.frx&quot;</span><span class="p">:</span><span class="mi">0000</span>
+   <span class="n">StartUpPosition</span> <span class="o">=</span>   <span class="mi">1</span>  <span class="s1">&#39;CenterOwner</span>
+<span class="n">End</span>
+<span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;UserForm1&quot;</span>
+<span class="n">Attribute</span> <span class="n">VB_GlobalNameSpace</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_Creatable</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_PredeclaredId</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">Attribute</span> <span class="n">VB_Exposed</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">CommandButton1_Click</span><span class="p">()</span>
+    <span class="n">Unload</span> <span class="n">Me</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">CommandButton2_Click</span><span class="p">()</span>
+    <span class="n">Cells</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">TextBox1</span><span class="o">.</span><span class="n">Text</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">SpinButton2_Change</span><span class="p">()</span>
+    <span class="n">TextBox1</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">SpinButton2</span><span class="o">.</span><span class="n">Value</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">TextBox1_Change</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">kaisu</span>
+    <span class="n">kaisu</span> <span class="o">=</span> <span class="n">TextBox1</span><span class="o">.</span><span class="n">Value</span>
+   <span class="s1">&#39;文字方塊非數值時的處理</span>
+    <span class="n">If</span> <span class="n">Not</span> <span class="n">IsNumeric</span><span class="p">(</span><span class="n">kaisu</span><span class="p">)</span> <span class="n">Then</span>
+       <span class="n">MsgBox</span> <span class="s2">&quot;請輸入數值!!!&quot;</span>
+       <span class="n">TextBox1</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">SpinButton2</span><span class="o">.</span><span class="n">Value</span>
+   <span class="s1">&#39;文字方塊的值超過微調按鈕時的處理</span>
+    <span class="n">ElseIf</span> <span class="n">kaisu</span> <span class="o">&lt;</span> <span class="n">SpinButton2</span><span class="o">.</span><span class="n">Min</span> <span class="n">Or</span> <span class="n">kaisu</span> <span class="o">&gt;</span> <span class="n">SpinButton2</span><span class="o">.</span><span class="n">Max</span> <span class="n">Then</span>
+       <span class="n">MsgBox</span> <span class="s2">&quot; 請輸入範圍 &quot;</span> <span class="o">&amp;</span> <span class="n">SpinButton2</span><span class="o">.</span><span class="n">Min</span> <span class="o">&amp;</span> <span class="s2">&quot;~&quot;</span> <span class="o">&amp;</span> <span class="n">SpinButton2</span><span class="o">.</span><span class="n">Max</span> <span class="o">&amp;</span> <span class="s2">&quot; 的數值!!!&quot;</span>
+       <span class="n">TextBox1</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">SpinButton2</span><span class="o">.</span><span class="n">Value</span>
+    <span class="n">Else</span>
+   <span class="s1">&#39;文字方塊的值設定為微調按鈕的值</span>
+       <span class="n">SpinButton2</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">kaisu</span>
+    <span class="n">End</span> <span class="n">If</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">UserForm_Click</span><span class="p">()</span>
+
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+<p>VERSION 5.00
+Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} UserForm2
+Caption         =   “選擇處存格”
+ClientHeight    =   1650
+ClientLeft      =   45
+ClientTop       =   435
+ClientWidth     =   4620
+OleObjectBlob   =   “UserForm2.frx”:0000
+StartUpPosition =   1  ‘CenterOwner
+End
+Attribute VB_Name = “UserForm2”
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Option Explicit</p>
+<p>Private Sub CommandButton1_Click()
+Unload Me
+End Sub</p>
+<p>Private Sub CommandButton2_Click()
+If RefEdit1.Value &lt;&gt; “” Then
+Range(RefEdit1.Value).Copy Destination:=Range(“H3”)
+End If
+End Sub</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id16">
+<h2>245 載入圖像<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">顯示表單</span><span class="p">()</span>
+    <span class="n">UserForm1</span><span class="o">.</span><span class="n">Show</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">顯示表單2</span><span class="p">()</span>
+    <span class="n">UserForm2</span><span class="o">.</span><span class="n">Show</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VERSION</span> <span class="mf">5.00</span>
+<span class="n">Begin</span> <span class="p">{</span><span class="n">C62A69F0</span><span class="o">-</span><span class="mi">16</span><span class="n">DC</span><span class="o">-</span><span class="mi">11</span><span class="n">CE</span><span class="o">-</span><span class="mf">9E98</span><span class="o">-</span><span class="mi">00</span><span class="n">AA00574A4F</span><span class="p">}</span> <span class="n">UserForm1</span> 
+   <span class="n">Caption</span>         <span class="o">=</span>   <span class="s2">&quot;讀取影像&quot;</span>
+   <span class="n">ClientHeight</span>    <span class="o">=</span>   <span class="mi">4620</span>
+   <span class="n">ClientLeft</span>      <span class="o">=</span>   <span class="mi">45</span>
+   <span class="n">ClientTop</span>       <span class="o">=</span>   <span class="mi">435</span>
+   <span class="n">ClientWidth</span>     <span class="o">=</span>   <span class="mi">6795</span>
+   <span class="n">OleObjectBlob</span>   <span class="o">=</span>   <span class="s2">&quot;UserForm1.frx&quot;</span><span class="p">:</span><span class="mi">0000</span>
+   <span class="n">StartUpPosition</span> <span class="o">=</span>   <span class="mi">1</span>  <span class="s1">&#39;CenterOwner</span>
+<span class="n">End</span>
+<span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;UserForm1&quot;</span>
+<span class="n">Attribute</span> <span class="n">VB_GlobalNameSpace</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_Creatable</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_PredeclaredId</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">Attribute</span> <span class="n">VB_Exposed</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+<span class="n">Dim</span> <span class="n">dRange</span> <span class="n">As</span> <span class="n">Range</span> <span class="s1">&#39;宣告模組等級的變數dRange</span>
+
+<span class="n">Sub</span> <span class="n">readrecord</span><span class="p">(</span><span class="n">no</span> <span class="n">As</span> <span class="n">Long</span><span class="p">)</span>
+    <span class="n">Dim</span> <span class="n">rw</span> <span class="n">As</span> <span class="n">Long</span>
+   
+   <span class="s1">&#39;查詢表格第1欄&quot;NO&quot;的儲存格,接著指定給dRange</span>
+    <span class="n">Set</span> <span class="n">dRange</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span><span class="o">.</span><span class="n">Columns</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Find</span><span class="p">(</span><span class="n">What</span><span class="o">:=</span><span class="n">no</span><span class="p">,</span> <span class="n">LookAt</span><span class="o">:=</span><span class="n">xlWhole</span><span class="p">)</span>
+    <span class="n">If</span> <span class="n">dRange</span> <span class="n">Is</span> <span class="n">Nothing</span> <span class="n">Then</span>
+        <span class="n">MsgBox</span> <span class="s2">&quot;沒有資料!!&quot;</span>
+        <span class="n">Exit</span> <span class="n">Sub</span>
+    <span class="n">End</span> <span class="n">If</span>
+   
+   <span class="s1">&#39;取得NO欄位的列編號,並指定給rw</span>
+    <span class="n">rw</span> <span class="o">=</span> <span class="n">dRange</span><span class="o">.</span><span class="n">Row</span>
+    <span class="n">Label1</span><span class="o">.</span><span class="n">Caption</span> <span class="o">=</span> <span class="n">Cells</span><span class="p">(</span><span class="n">rw</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+    <span class="n">TextBox1</span><span class="o">.</span><span class="n">Text</span> <span class="o">=</span> <span class="n">Cells</span><span class="p">(</span><span class="n">rw</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+    <span class="n">If</span> <span class="n">Cells</span><span class="p">(</span><span class="n">rw</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="s2">&quot;男&quot;</span> <span class="n">Then</span>
+       <span class="n">OptionButton1</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">Else</span>
+       <span class="n">OptionButton2</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="n">End</span> <span class="n">If</span>
+    
+   <span class="s1">&#39;將對應的列的每個值,讀進各個控制項中</span>
+    <span class="n">CheckBox1</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">Cells</span><span class="p">(</span><span class="n">rw</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+    <span class="n">CheckBox2</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">Cells</span><span class="p">(</span><span class="n">rw</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+    <span class="n">ComboBox1</span><span class="o">.</span><span class="n">Text</span> <span class="o">=</span> <span class="n">Cells</span><span class="p">(</span><span class="n">rw</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+    <span class="n">ListBox1</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">Cells</span><span class="p">(</span><span class="n">rw</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+       
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">search_Click</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Long</span><span class="p">,</span> <span class="n">no</span> <span class="n">As</span> <span class="n">Long</span>
+    <span class="n">If</span> <span class="n">IsNumeric</span><span class="p">(</span><span class="n">TextBox2</span><span class="o">.</span><span class="n">Text</span><span class="p">)</span> <span class="o">=</span> <span class="kc">False</span> <span class="n">Then</span>
+       <span class="n">MsgBox</span> <span class="s2">&quot;請輸入編號!!&quot;</span>
+       <span class="n">Exit</span> <span class="n">Sub</span>
+    <span class="n">End</span> <span class="n">If</span>
+    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span> <span class="n">To</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span><span class="o">.</span><span class="n">Rows</span><span class="o">.</span><span class="n">Count</span>
+        <span class="n">If</span> <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Text</span> <span class="o">=</span> <span class="n">TextBox2</span><span class="o">.</span><span class="n">Text</span> <span class="n">Then</span>
+            <span class="n">no</span> <span class="o">=</span> <span class="n">Val</span><span class="p">(</span><span class="n">TextBox2</span><span class="o">.</span><span class="n">Text</span><span class="p">)</span>
+            <span class="n">Exit</span> <span class="n">For</span>
+        <span class="n">End</span> <span class="n">If</span>
+    <span class="n">Next</span>
+    <span class="n">If</span> <span class="n">no</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">Then</span>
+        <span class="n">MsgBox</span> <span class="s2">&quot;指定的編號不存在!!&quot;</span>
+        <span class="n">Exit</span> <span class="n">Sub</span>
+    <span class="n">Else</span>
+        <span class="n">Call</span> <span class="n">readrecord</span><span class="p">(</span><span class="n">no</span><span class="p">)</span>
+    <span class="n">End</span> <span class="n">If</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">delete_Click</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">ans</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">no</span> <span class="n">As</span> <span class="n">Long</span><span class="p">,</span> <span class="n">srcRange</span> <span class="n">As</span> <span class="n">Range</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="n">MsgBox</span><span class="p">(</span><span class="n">Label1</span><span class="o">.</span><span class="n">Caption</span> <span class="o">&amp;</span> <span class="s2">&quot;:&quot;</span> <span class="o">&amp;</span> <span class="n">TextBox1</span><span class="o">.</span><span class="n">Text</span> <span class="o">&amp;</span> <span class="n">_</span>
+          <span class="s2">&quot; 的記錄可以刪除嗎??&quot;</span><span class="p">,</span> <span class="n">_</span>
+          <span class="n">vbOKCancel</span> <span class="o">+</span> <span class="n">vbExclamation</span><span class="p">,</span> <span class="s2">&quot;刪除確認&quot;</span><span class="p">)</span>
+    <span class="n">If</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">vbCancel</span> <span class="n">Then</span> <span class="n">Exit</span> <span class="n">Sub</span>
+    <span class="n">Set</span> <span class="n">srcRange</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span>
+    <span class="n">If</span> <span class="n">dRange</span><span class="o">.</span><span class="n">Row</span> <span class="o">=</span> <span class="n">srcRange</span><span class="o">.</span><span class="n">Rows</span><span class="o">.</span><span class="n">Count</span> <span class="n">Then</span>
+       <span class="n">no</span> <span class="o">=</span> <span class="n">dRange</span><span class="o">.</span><span class="n">Offset</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+    <span class="n">Else</span>
+       <span class="n">no</span> <span class="o">=</span> <span class="n">dRange</span><span class="o">.</span><span class="n">Offset</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+    <span class="n">End</span> <span class="n">If</span>
+    <span class="n">srcRange</span><span class="o">.</span><span class="n">Rows</span><span class="p">(</span><span class="n">dRange</span><span class="o">.</span><span class="n">Row</span><span class="p">)</span><span class="o">.</span><span class="n">delete</span> <span class="n">Shift</span><span class="o">:=</span><span class="n">xlShiftUp</span>
+    <span class="n">Call</span> <span class="n">readrecord</span><span class="p">(</span><span class="n">no</span><span class="p">)</span>
+    <span class="n">Set</span> <span class="n">srcRange</span> <span class="o">=</span> <span class="n">Nothing</span>
+    
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">first_Click</span><span class="p">()</span>
+   <span class="s1">&#39;起始:將第1件儲存格A2的值(1)當作參數,呼叫readrecord</span>
+    <span class="n">Call</span> <span class="n">readrecord</span><span class="p">(</span><span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A2&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span><span class="p">)</span>
+<span class="n">End</span> <span class="n">Sub</span>
+    
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">prev_Click</span><span class="p">()</span>
+    <span class="n">If</span> <span class="n">dRange</span><span class="o">.</span><span class="n">Row</span> <span class="o">=</span> <span class="mi">2</span> <span class="n">Then</span>
+       <span class="n">MsgBox</span> <span class="s2">&quot;起始資料錄!!&quot;</span>
+    <span class="n">Else</span>
+      <span class="s1">&#39;前:將第目前儲存格的上1個儲存格的值(1)當作參數,呼叫readrecord</span>
+       <span class="n">Call</span> <span class="n">readrecord</span><span class="p">(</span><span class="n">dRange</span><span class="o">.</span><span class="n">Offset</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span><span class="p">)</span>
+    <span class="n">End</span> <span class="n">If</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">exit1_Click</span><span class="p">()</span>
+   <span class="n">Unload</span> <span class="n">Me</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">register_Click</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">obj</span> <span class="n">As</span> <span class="n">Object</span><span class="p">,</span> <span class="n">ans</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">rw</span> <span class="n">As</span> <span class="n">Long</span>
+   
+   <span class="s1">&#39;查詢每個控制項有沒有空的,如果發現有則轉移到myMessage處理</span>
+    <span class="n">For</span> <span class="n">Each</span> <span class="n">obj</span> <span class="n">In</span> <span class="n">UserForm1</span><span class="o">.</span><span class="n">Controls</span>
+        <span class="n">Select</span> <span class="n">Case</span> <span class="n">TypeName</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+            <span class="n">Case</span> <span class="s2">&quot;TextBox&quot;</span>
+                <span class="n">If</span> <span class="n">Not</span> <span class="p">(</span><span class="n">obj</span><span class="o">.</span><span class="n">Name</span> <span class="o">=</span> <span class="s2">&quot;TextBox2&quot;</span><span class="p">)</span> <span class="n">Then</span>
+                   <span class="n">If</span> <span class="n">obj</span><span class="o">.</span><span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="n">Then</span> <span class="n">GoTo</span> <span class="n">myMessage</span>
+                <span class="n">End</span> <span class="n">If</span>
+            <span class="n">Case</span> <span class="s2">&quot;ListBox&quot;</span><span class="p">,</span> <span class="s2">&quot;ComboBox&quot;</span>
+                <span class="n">If</span> <span class="n">obj</span><span class="o">.</span><span class="n">ListIndex</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="n">Then</span> <span class="n">GoTo</span> <span class="n">myMessage</span>
+        <span class="n">End</span> <span class="n">Select</span>
+    <span class="n">Next</span>
+    
+   <span class="s1">&#39;如果2個選項按鈕都是False,則轉移到myMessage處理</span>
+    <span class="n">If</span> <span class="n">OptionButton1</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="kc">False</span> <span class="n">And</span> <span class="n">OptionButton2</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="kc">False</span> <span class="n">Then</span>
+        <span class="n">GoTo</span> <span class="n">myMessage</span>
+    <span class="n">End</span> <span class="n">If</span>
+   
+   <span class="s1">&#39;登錄確認</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="n">MsgBox</span><span class="p">(</span><span class="s2">&quot;可以登錄資料嗎??&quot;</span><span class="p">,</span> <span class="n">vbOKCancel</span><span class="p">,</span> <span class="s2">&quot;登錄確認&quot;</span><span class="p">)</span>
+    <span class="n">If</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">vbCancel</span> <span class="n">Then</span> <span class="n">Exit</span> <span class="n">Sub</span>
+    <span class="n">rw</span> <span class="o">=</span> <span class="n">dRange</span><span class="o">.</span><span class="n">Row</span>
+    <span class="n">Cells</span><span class="p">(</span><span class="n">rw</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">Label1</span><span class="o">.</span><span class="n">Caption</span>
+    
+   <span class="s1">&#39;將各個控制項的值,寫入對應的儲存格中</span>
+    <span class="n">Cells</span><span class="p">(</span><span class="n">rw</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">TextBox1</span><span class="o">.</span><span class="n">Text</span>
+    <span class="n">If</span> <span class="n">OptionButton1</span><span class="o">.</span><span class="n">Value</span> <span class="n">Then</span>
+        <span class="n">Cells</span><span class="p">(</span><span class="n">rw</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">OptionButton1</span><span class="o">.</span><span class="n">Caption</span>
+    <span class="n">Else</span>
+        <span class="n">Cells</span><span class="p">(</span><span class="n">rw</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">OptionButton2</span><span class="o">.</span><span class="n">Caption</span>
+    <span class="n">End</span> <span class="n">If</span>
+    <span class="n">Cells</span><span class="p">(</span><span class="n">rw</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">CheckBox1</span><span class="o">.</span><span class="n">Value</span>
+    <span class="n">Cells</span><span class="p">(</span><span class="n">rw</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">CheckBox2</span><span class="o">.</span><span class="n">Value</span>
+    <span class="n">Cells</span><span class="p">(</span><span class="n">rw</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">ComboBox1</span><span class="o">.</span><span class="n">Text</span>
+    <span class="n">Cells</span><span class="p">(</span><span class="n">rw</span><span class="p">,</span> <span class="mi">7</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">ListBox1</span><span class="o">.</span><span class="n">List</span><span class="p">(</span><span class="n">ListBox1</span><span class="o">.</span><span class="n">ListIndex</span><span class="p">)</span>
+    <span class="n">Exit</span> <span class="n">Sub</span>
+    
+<span class="n">myMessage</span><span class="p">:</span>
+    <span class="n">MsgBox</span> <span class="p">(</span><span class="s2">&quot;遺漏資料!!&quot;</span><span class="p">)</span>
+    <span class="n">Exit</span> <span class="n">Sub</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">new1_Click</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">obj</span> <span class="n">As</span> <span class="n">Control</span>
+     
+   <span class="s1">&#39;重設每個控制項的值</span>
+    <span class="n">For</span> <span class="n">Each</span> <span class="n">obj</span> <span class="n">In</span> <span class="n">UserForm1</span><span class="o">.</span><span class="n">Controls</span>
+        <span class="n">Select</span> <span class="n">Case</span> <span class="n">TypeName</span><span class="p">(</span><span class="n">obj</span><span class="p">)</span>
+            <span class="n">Case</span> <span class="s2">&quot;TextBox&quot;</span>
+                <span class="n">obj</span><span class="o">.</span><span class="n">Text</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+            <span class="n">Case</span> <span class="s2">&quot;ListBox&quot;</span><span class="p">,</span> <span class="s2">&quot;ComboBox&quot;</span>
+                <span class="n">obj</span><span class="o">.</span><span class="n">ListIndex</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+            <span class="n">Case</span> <span class="s2">&quot;OptionButton&quot;</span><span class="p">,</span> <span class="s2">&quot;CheckBox&quot;</span>
+                <span class="n">obj</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">End</span> <span class="n">Select</span>
+    <span class="n">Next</span>
+    <span class="n">With</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span>
+        <span class="s1">&#39;在標籤上設定新列的編號</span>
+         <span class="n">Label1</span><span class="o">.</span><span class="n">Caption</span> <span class="o">=</span> <span class="o">.</span><span class="n">Cells</span><span class="p">(</span><span class="o">.</span><span class="n">Rows</span><span class="o">.</span><span class="n">Count</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="s1">&#39;將新列的A欄儲存格,指定給變數dRange</span>
+         <span class="n">Set</span> <span class="n">dRange</span> <span class="o">=</span> <span class="o">.</span><span class="n">Cells</span><span class="p">(</span><span class="o">.</span><span class="n">Rows</span><span class="o">.</span><span class="n">Count</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Offset</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">End</span> <span class="n">With</span>
+    
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">next1_Click</span><span class="p">()</span>
+    <span class="n">If</span> <span class="n">dRange</span><span class="o">.</span><span class="n">Row</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span><span class="o">.</span><span class="n">Rows</span><span class="o">.</span><span class="n">Count</span> <span class="n">Then</span>
+       <span class="n">MsgBox</span> <span class="s2">&quot;終止資料錄!!&quot;</span>
+    <span class="n">Else</span>
+      <span class="s1">&#39;後:將第目前儲存格的下1個儲存格的值(1)當作參數,呼叫readrecord</span>
+       <span class="n">Call</span> <span class="n">readrecord</span><span class="p">(</span><span class="n">dRange</span><span class="o">.</span><span class="n">Offset</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span><span class="p">)</span>
+    <span class="n">End</span> <span class="n">If</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">last_Click</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">no</span> <span class="n">As</span> <span class="n">Long</span>
+    <span class="n">With</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span>
+        <span class="s1">&#39;將表格的A欄的最後列的值,指定給變數no</span>
+         <span class="n">no</span> <span class="o">=</span> <span class="o">.</span><span class="n">Cells</span><span class="p">(</span><span class="o">.</span><span class="n">Rows</span><span class="o">.</span><span class="n">Count</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span>
+    <span class="n">End</span> <span class="n">With</span>
+      
+   <span class="s1">&#39;終止:將第目前儲存格的下1個儲存格的值(1)當作參數,呼叫readrecord</span>
+    <span class="n">Call</span> <span class="n">readrecord</span><span class="p">(</span><span class="n">no</span><span class="p">)</span>
+
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">UserForm_Initialize</span><span class="p">()</span>
+    
+    <span class="n">ComboBox1</span><span class="o">.</span><span class="n">RowSource</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;N2:N27&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Address</span>
+    <span class="n">ListBox1</span><span class="o">.</span><span class="n">RowSource</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;O2:O9&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Address</span>
+   <span class="s1">&#39;將第1件儲存格A2的值(1)當作參數,呼叫readrecord</span>
+    <span class="n">Call</span> <span class="n">readrecord</span><span class="p">(</span><span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A2&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span><span class="p">)</span>
+        
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VERSION</span> <span class="mf">5.00</span>
+<span class="n">Begin</span> <span class="p">{</span><span class="n">C62A69F0</span><span class="o">-</span><span class="mi">16</span><span class="n">DC</span><span class="o">-</span><span class="mi">11</span><span class="n">CE</span><span class="o">-</span><span class="mf">9E98</span><span class="o">-</span><span class="mi">00</span><span class="n">AA00574A4F</span><span class="p">}</span> <span class="n">UserForm2</span> 
+   <span class="n">Caption</span>         <span class="o">=</span>   <span class="s2">&quot;Åª¨ú¼v¹³&quot;</span>
+   <span class="n">ClientHeight</span>    <span class="o">=</span>   <span class="mi">4530</span>
+   <span class="n">ClientLeft</span>      <span class="o">=</span>   <span class="mi">45</span>
+   <span class="n">ClientTop</span>       <span class="o">=</span>   <span class="mi">435</span>
+   <span class="n">ClientWidth</span>     <span class="o">=</span>   <span class="mi">5415</span>
+   <span class="n">OleObjectBlob</span>   <span class="o">=</span>   <span class="s2">&quot;UserForm2.frx&quot;</span><span class="p">:</span><span class="mi">0000</span>
+   <span class="n">StartUpPosition</span> <span class="o">=</span>   <span class="mi">1</span>  <span class="s1">&#39;CenterOwner</span>
+<span class="n">End</span>
+<span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;UserForm2&quot;</span>
+<span class="n">Attribute</span> <span class="n">VB_GlobalNameSpace</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_Creatable</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_PredeclaredId</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">Attribute</span> <span class="n">VB_Exposed</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">CommandButton1_Click</span><span class="p">()</span>
+    <span class="n">Unload</span> <span class="n">Me</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">CommandButton2_Click</span><span class="p">()</span>
+    <span class="n">With</span> <span class="n">Application</span><span class="o">.</span><span class="n">FileDialog</span><span class="p">(</span><span class="n">msoFileDialogFilePicker</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">Filters</span><span class="o">.</span><span class="n">Add</span> <span class="s2">&quot;ImageFile&quot;</span><span class="p">,</span> <span class="s2">&quot;*.jpg; *.jpeg&quot;</span><span class="p">,</span> <span class="mi">1</span>
+        <span class="o">.</span><span class="n">AllowMultiSelect</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="n">If</span> <span class="o">.</span><span class="n">Show</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span> <span class="n">Then</span>
+            <span class="n">Image1</span><span class="o">.</span><span class="n">Picture</span> <span class="o">=</span> <span class="n">LoadPicture</span><span class="p">(</span><span class="o">.</span><span class="n">SelectedItems</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+        <span class="n">End</span> <span class="n">If</span>
+    <span class="n">End</span> <span class="n">With</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="ch12_%E5%9C%96%E8%A1%A8%E5%9C%96%E6%A1%88.html" title="previous page">Ch12 圖表、圖案</a>
+    <a class='right-next' id="next-link" href="ch14_%E5%A4%96%E9%83%A8%E8%B3%87%E6%96%99%E6%93%8D%E4%BD%9C%E8%88%87%E5%85%B6%E4%BB%96.html" title="next page">Ch14 外部資料操作與其他</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book Community<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>

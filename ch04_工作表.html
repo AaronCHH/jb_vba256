@@ -1,0 +1,689 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ch04 工作表 &#8212; My sample book</title>
+    
+  <link rel="stylesheet" href="_static/css/index.f658d18f9b420779cfdf24aa0a7e2d77.css">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e7340bb3dbd8dde6db86f25597f54a1b.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.d3f166471bb80abb5163.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.7d483ff0a819d6edff12ce0b1ead3928.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Ch05 活頁簿" href="ch05_%E6%B4%BB%E9%A0%81%E7%B0%BF.html" />
+    <link rel="prev" title="Ch03 資料操作" href="ch03_%E8%B3%87%E6%96%99%E6%93%8D%E4%BD%9C.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="index.html">
+  
+  <img src="_static/logo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">My sample book</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch01_%E5%9F%BA%E6%9C%AC.html">
+   Ch01 基本
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch02_%E5%84%B2%E5%AD%98%E6%A0%BC.html">
+   Ch02 儲存格
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch03_%E8%B3%87%E6%96%99%E6%93%8D%E4%BD%9C.html">
+   Ch03 資料操作
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Ch04 工作表
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch05_%E6%B4%BB%E9%A0%81%E7%B0%BF.html">
+   Ch05 活頁簿
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch06_%E6%AA%94%E6%A1%88.html">
+   Ch06 檔案
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch07_%E8%A6%96%E7%AA%97.html">
+   Ch07 視窗
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch08_%E5%88%97%E5%8D%B0.html">
+   Ch08 列印
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch09_%E7%9B%AE%E6%9C%9F%E6%99%82%E9%96%93%E5%87%BD%E6%95%B8.html">
+   Ch09 日期時間函數
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch10_%E6%96%87%E5%AD%97%E6%93%8D%E4%BD%9C%E5%87%BD%E6%95%B8.html">
+   Ch10 文字操作函數
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch11_%E5%85%B6%E4%BB%96%E5%87%BD%E6%95%B8.html">
+   Ch11 其他函數
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch12_%E5%9C%96%E8%A1%A8%E5%9C%96%E6%A1%88.html">
+   Ch12 圖表、圖案
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch13_%E4%BD%BF%E7%94%A8%E8%80%85%E8%A1%A8%E5%96%AE.html">
+   Ch13 使用者表單
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ch14_%E5%A4%96%E9%83%A8%E8%B3%87%E6%96%99%E6%93%8D%E4%BD%9C%E8%88%87%E5%85%B6%E4%BB%96.html">
+   Ch14 外部資料操作與其他
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/ch04_工作表.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fch04_工作表.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+            <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                    data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                    title="Fullscreen mode"><i
+                        class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   112 參照工作表
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   113 選取工作表
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   114 計算工作表的個數
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id4">
+   115 新增工作表
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id5">
+   116 刪除工作表
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   117 複製工作表
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id7">
+   118 移動工作表
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id8">
+   119 切換工作表的顯示或隱藏
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id9">
+   120 設定或取得工作表名
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id10">
+   121 改變工作表的索引標籤顏色
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id11">
+   122 限制游標在工作表內移動的範圍
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id12">
+   123 設定與解除工作表的保護
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id13">
+   124 改變工作表的順序
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id14">
+   125 工作表中資料更新時自動執行的程序
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id15">
+   126 確認工作表是否處於保護狀態
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="ch04">
+<h1>Ch04 工作表<a class="headerlink" href="#ch04" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>112 參照工作表<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">參照工作表</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span>
+    <span class="n">With</span> <span class="n">Worksheets</span><span class="p">(</span><span class="s2">&quot;Sheet1&quot;</span><span class="p">)</span>
+        <span class="o">.</span><span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B1&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">Sheets</span><span class="o">.</span><span class="n">Count</span>
+        <span class="o">.</span><span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B2&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">Worksheets</span><span class="o">.</span><span class="n">Count</span>
+        <span class="o">.</span><span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Value</span> <span class="o">=</span> <span class="n">Charts</span><span class="o">.</span><span class="n">Count</span>
+    <span class="n">End</span> <span class="n">With</span>
+    <span class="n">MsgBox</span> <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">Name</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>113 選取工作表<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">選擇工作表</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">myName</span> <span class="n">As</span> <span class="n">Integer</span>
+    <span class="n">Dim</span> <span class="n">mySheet</span> <span class="n">As</span> <span class="n">Worksheet</span>
+    <span class="n">Worksheets</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">Activate</span>
+    <span class="n">MsgBox</span> <span class="s2">&quot;選擇的工作表: &quot;</span> <span class="o">&amp;</span> <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">Name</span>
+    <span class="n">Worksheets</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Select</span>
+    <span class="n">Worksheets</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">Select</span> <span class="n">Replace</span><span class="o">:=</span><span class="kc">False</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>114 計算工作表的個數<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">工作表數</span><span class="p">()</span>
+    <span class="n">MsgBox</span> <span class="s2">&quot;工作表數: &quot;</span> <span class="o">&amp;</span> <span class="n">Worksheets</span><span class="o">.</span><span class="n">Count</span>
+    <span class="n">Worksheets</span><span class="p">(</span><span class="n">Array</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span><span class="o">.</span><span class="n">Select</span>
+    <span class="n">MsgBox</span> <span class="s2">&quot;選擇的工作表數: &quot;</span> <span class="o">&amp;</span> <span class="n">ActiveWindow</span><span class="o">.</span><span class="n">SelectedSheets</span><span class="o">.</span><span class="n">Count</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>115 新增工作表<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">新增工作表</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span>
+    
+    <span class="n">Do</span> <span class="n">Until</span> <span class="n">Worksheets</span><span class="o">.</span><span class="n">Count</span> <span class="o">=</span> <span class="mi">12</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">Worksheets</span><span class="o">.</span><span class="n">Count</span>
+        <span class="n">Worksheets</span><span class="o">.</span><span class="n">Add</span> <span class="n">After</span><span class="o">:=</span><span class="n">Worksheets</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">Name</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&amp;</span> <span class="s2">&quot;月&quot;</span>
+    <span class="n">Loop</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>116 刪除工作表<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">刪除工作表</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myWS</span> <span class="n">As</span> <span class="n">Worksheet</span>
+    <span class="n">Application</span><span class="o">.</span><span class="n">DisplayAlerts</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">For</span> <span class="n">Each</span> <span class="n">myWS</span> <span class="n">In</span> <span class="n">Worksheets</span>
+        <span class="n">If</span> <span class="n">myWS</span><span class="o">.</span><span class="n">Name</span> <span class="n">Like</span> <span class="s2">&quot;2006*&quot;</span> <span class="n">Then</span>
+           <span class="n">myWS</span><span class="o">.</span><span class="n">Delete</span>
+        <span class="n">End</span> <span class="n">If</span>
+    <span class="n">Next</span>
+    <span class="n">Application</span><span class="o">.</span><span class="n">DisplayAlerts</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>117 複製工作表<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">複製工作表</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myMonth</span><span class="p">,</span> <span class="n">myYear</span>
+    <span class="n">myMonth</span> <span class="o">=</span> <span class="n">Right</span><span class="p">(</span><span class="n">Worksheets</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Name</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">myYear</span> <span class="o">=</span> <span class="n">Left</span><span class="p">(</span><span class="n">Worksheets</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">Name</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+    
+    <span class="n">Worksheets</span><span class="p">(</span><span class="s2">&quot;Template&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Copy</span> <span class="n">Before</span><span class="o">:=</span><span class="n">Worksheets</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">If</span> <span class="n">myMonth</span> <span class="o">=</span> <span class="mi">12</span> <span class="n">Then</span>
+       <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">Name</span> <span class="o">=</span> <span class="n">myYear</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&amp;</span> <span class="s2">&quot;-01&quot;</span>
+    <span class="n">Else</span>
+       <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">Name</span> <span class="o">=</span> <span class="n">myYear</span> <span class="o">&amp;</span> <span class="s2">&quot;-&quot;</span> <span class="o">&amp;</span> <span class="n">Format</span><span class="p">(</span><span class="n">myMonth</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;00&quot;</span><span class="p">)</span>
+    <span class="n">End</span> <span class="n">If</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>118 移動工作表<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">移動工作表</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myWS</span> <span class="n">As</span> <span class="n">Worksheet</span>
+    <span class="n">For</span> <span class="n">Each</span> <span class="n">myWS</span> <span class="n">In</span> <span class="n">Worksheets</span>
+        <span class="n">If</span> <span class="n">Left</span><span class="p">(</span><span class="n">myWS</span><span class="o">.</span><span class="n">Name</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">=</span> <span class="s2">&quot;2006&quot;</span> <span class="n">Then</span>
+           <span class="n">myWS</span><span class="o">.</span><span class="n">Move</span> <span class="n">before</span><span class="o">:=</span><span class="n">Workbooks</span><span class="p">(</span><span class="s2">&quot;2006年.xls&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Worksheets</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+        <span class="n">End</span> <span class="n">If</span>
+    <span class="n">Next</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>119 切換工作表的顯示或隱藏<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+
+<span class="n">Sub</span> <span class="n">工作表的顯示或隱藏</span><span class="p">()</span>
+
+    <span class="n">With</span> <span class="n">Worksheets</span><span class="p">(</span><span class="s2">&quot;Template&quot;</span><span class="p">)</span>
+      <span class="n">If</span> <span class="o">.</span><span class="n">Visible</span> <span class="o">=</span> <span class="kc">True</span> <span class="n">Then</span>
+         <span class="o">.</span><span class="n">Visible</span> <span class="o">=</span> <span class="n">xlSheetVeryHidden</span>
+      <span class="n">Else</span>
+         <span class="o">.</span><span class="n">Visible</span> <span class="o">=</span> <span class="kc">True</span>
+      <span class="n">End</span> <span class="n">If</span>
+    <span class="n">End</span> <span class="n">With</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>120 設定或取得工作表名<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">確認工作表名</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">myWS</span> <span class="n">As</span> <span class="n">Worksheet</span><span class="p">,</span> <span class="n">myName</span> <span class="n">As</span> <span class="n">String</span>
+    
+    <span class="n">myName</span> <span class="o">=</span> <span class="n">Format</span><span class="p">(</span><span class="n">Date</span><span class="p">,</span> <span class="s2">&quot;yyyy-mm&quot;</span><span class="p">)</span>
+    <span class="n">For</span> <span class="n">Each</span> <span class="n">myWS</span> <span class="n">In</span> <span class="n">Worksheets</span>
+        <span class="n">If</span> <span class="n">myWS</span><span class="o">.</span><span class="n">Name</span> <span class="o">=</span> <span class="n">myName</span> <span class="n">Then</span>
+           <span class="n">MsgBox</span> <span class="s2">&quot;同名的工作表存在!!&quot;</span>
+           <span class="n">Exit</span> <span class="n">Sub</span>
+        <span class="n">End</span> <span class="n">If</span>
+    <span class="n">Next</span>
+    <span class="n">Worksheets</span><span class="p">(</span><span class="s2">&quot;Template&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Copy</span> <span class="n">Before</span><span class="o">:=</span><span class="n">Worksheets</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">Name</span> <span class="o">=</span> <span class="n">myName</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id10">
+<h2>121 改變工作表的索引標籤顏色<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">改變工作表的索引標籤顏色</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">mySheet</span> <span class="n">As</span> <span class="n">Worksheet</span>
+    <span class="n">For</span> <span class="n">Each</span> <span class="n">mySheet</span> <span class="n">In</span> <span class="n">Worksheets</span>
+        <span class="n">Select</span> <span class="n">Case</span> <span class="n">Left</span><span class="p">(</span><span class="n">mySheet</span><span class="o">.</span><span class="n">Name</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+            <span class="n">Case</span> <span class="s2">&quot;2006&quot;</span>
+                <span class="n">mySheet</span><span class="o">.</span><span class="n">Tab</span><span class="o">.</span><span class="n">Color</span> <span class="o">=</span> <span class="n">RGB</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">)</span>
+            <span class="n">Case</span> <span class="s2">&quot;2007&quot;</span>
+                <span class="n">mySheet</span><span class="o">.</span><span class="n">Tab</span><span class="o">.</span><span class="n">Color</span> <span class="o">=</span> <span class="n">RGB</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
+        <span class="n">End</span> <span class="n">Select</span>
+    <span class="n">Next</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id11">
+<h2>122 限制游標在工作表內移動的範圍<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">指定儲存格移動範圍</span><span class="p">()</span>
+    <span class="n">Worksheets</span><span class="p">(</span><span class="s2">&quot;英語測試&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ScrollArea</span> <span class="o">=</span> <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A3&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span><span class="o">.</span><span class="n">Address</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">解除儲存格移動範圍</span><span class="p">()</span>
+    <span class="n">Worksheets</span><span class="p">(</span><span class="s2">&quot;英語測試&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ScrollArea</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id12">
+<h2>123 設定與解除工作表的保護<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">保護工作表</span><span class="p">()</span>
+    <span class="n">On</span> <span class="n">Error</span> <span class="n">Resume</span> <span class="n">Next</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;C4:D13&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Locked</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">Protect</span> <span class="n">Password</span><span class="o">:=</span><span class="s2">&quot;hogo&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Sub</span> <span class="n">保護工作表解除</span><span class="p">()</span>
+    <span class="n">On</span> <span class="n">Error</span> <span class="n">GoTo</span> <span class="n">errHander</span>
+    <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">Unprotect</span>
+    <span class="n">Exit</span> <span class="n">Sub</span>
+<span class="n">errHander</span><span class="p">:</span>
+    <span class="n">MsgBox</span> <span class="s2">&quot;請輸入正確密碼!!!&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id13">
+<h2>124 改變工作表的順序<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">工作表的排序</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">sRange</span> <span class="n">As</span> <span class="n">Range</span><span class="p">,</span> <span class="n">sName</span> <span class="n">As</span> <span class="n">String</span>
+    <span class="n">Worksheets</span><span class="o">.</span><span class="n">Add</span><span class="p">(</span><span class="n">before</span><span class="o">:=</span><span class="n">Worksheets</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span><span class="o">.</span><span class="n">Name</span> <span class="o">=</span> <span class="s2">&quot;temp&quot;</span>
+    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span> <span class="n">To</span> <span class="n">Worksheets</span><span class="o">.</span><span class="n">Count</span>
+        <span class="n">Cells</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">Worksheets</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">.</span><span class="n">Name</span>
+    <span class="n">Next</span>
+    <span class="n">Set</span> <span class="n">sRange</span> <span class="o">=</span> <span class="n">Cells</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">CurrentRegion</span>
+    
+    <span class="n">With</span> <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">Sort</span>
+        <span class="o">.</span><span class="n">SortFields</span><span class="o">.</span><span class="n">Clear</span>
+        <span class="o">.</span><span class="n">SortFields</span><span class="o">.</span><span class="n">Add</span> <span class="n">Key</span><span class="o">:=</span><span class="n">Range</span><span class="p">(</span><span class="s2">&quot;A2&quot;</span><span class="p">),</span> <span class="n">SortOn</span><span class="o">:=</span><span class="n">xlSortOnValues</span><span class="p">,</span> <span class="n">_</span>
+                        <span class="n">Order</span><span class="o">:=</span><span class="n">xlAscending</span>
+        <span class="o">.</span><span class="n">SetRange</span> <span class="n">sRange</span>
+        <span class="o">.</span><span class="n">Apply</span>
+    <span class="n">End</span> <span class="n">With</span>
+    <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span> <span class="n">To</span> <span class="n">sRange</span><span class="o">.</span><span class="n">Rows</span><span class="o">.</span><span class="n">Count</span>
+        <span class="n">sName</span> <span class="o">=</span> <span class="n">Worksheets</span><span class="p">(</span><span class="s2">&quot;temp&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Cells</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">Worksheets</span><span class="p">(</span><span class="n">sName</span><span class="p">)</span><span class="o">.</span><span class="n">Move</span> <span class="n">after</span><span class="o">:=</span><span class="n">ActiveSheet</span>
+    <span class="n">Next</span>
+    <span class="n">Application</span><span class="o">.</span><span class="n">DisplayAlerts</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">Worksheets</span><span class="p">(</span><span class="s2">&quot;temp&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Delete</span>
+    <span class="n">Application</span><span class="o">.</span><span class="n">DisplayAlerts</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id14">
+<h2>125 工作表中資料更新時自動執行的程序<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VERSION</span> <span class="mf">1.0</span> <span class="n">CLASS</span>
+<span class="n">BEGIN</span>
+  <span class="n">MultiUse</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>  <span class="s1">&#39;True</span>
+<span class="n">END</span>
+<span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Sheet1&quot;</span>
+<span class="n">Attribute</span> <span class="n">VB_GlobalNameSpace</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_Creatable</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="n">Attribute</span> <span class="n">VB_PredeclaredId</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">Attribute</span> <span class="n">VB_Exposed</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">Worksheet_Change</span><span class="p">(</span><span class="n">ByVal</span> <span class="n">Target</span> <span class="n">As</span> <span class="n">Range</span><span class="p">)</span>
+    <span class="n">On</span> <span class="n">Error</span> <span class="n">GoTo</span> <span class="n">errhandler</span>
+    <span class="n">If</span> <span class="n">Target</span><span class="o">.</span><span class="n">Column</span> <span class="o">&lt;&gt;</span> <span class="mi">2</span> <span class="n">Then</span> <span class="n">Exit</span> <span class="n">Sub</span>
+    <span class="n">If</span> <span class="n">Target</span><span class="o">.</span><span class="n">Offset</span><span class="p">(,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">&lt;&gt;</span> <span class="s2">&quot;&quot;</span> <span class="n">Then</span>
+       <span class="n">Target</span><span class="o">.</span><span class="n">Offset</span><span class="p">(,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">Date</span>
+    <span class="n">End</span> <span class="n">If</span>
+    <span class="n">Exit</span> <span class="n">Sub</span>
+<span class="n">errhandler</span><span class="p">:</span>
+<span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">Worksheet_Activate</span><span class="p">()</span>
+    <span class="n">Dim</span> <span class="n">ans</span> <span class="n">As</span> <span class="n">Integer</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="n">MsgBox</span><span class="p">(</span><span class="s2">&quot;可以刪除作業內容和作業日嗎!!&quot;</span><span class="p">,</span> <span class="n">_</span>
+        <span class="n">vbYesNo</span><span class="p">,</span> <span class="s2">&quot;刪除確認&quot;</span><span class="p">)</span>
+    <span class="n">If</span> <span class="n">ans</span> <span class="o">=</span> <span class="n">vbYes</span> <span class="n">Then</span>
+        <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;B4:C7&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">ClearContents</span>
+    <span class="n">End</span> <span class="n">If</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id15">
+<h2>126 確認工作表是否處於保護狀態<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Attribute</span> <span class="n">VB_Name</span> <span class="o">=</span> <span class="s2">&quot;Module1&quot;</span>
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Sub</span> <span class="n">保護工作表確認</span><span class="p">()</span>
+    <span class="n">If</span> <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">ProtectContents</span> <span class="n">Then</span>
+        <span class="n">MsgBox</span> <span class="s2">&quot;工作表處於保護狀態!!&quot;</span>
+        <span class="n">Exit</span> <span class="n">Sub</span>
+    <span class="n">End</span> <span class="n">If</span>
+    <span class="n">Range</span><span class="p">(</span><span class="s2">&quot;C4:D13&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">Locked</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">ActiveSheet</span><span class="o">.</span><span class="n">Protect</span> <span class="n">Password</span><span class="o">:=</span><span class="s2">&quot;hogo&quot;</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="ch03_%E8%B3%87%E6%96%99%E6%93%8D%E4%BD%9C.html" title="previous page">Ch03 資料操作</a>
+    <a class='right-next' id="next-link" href="ch05_%E6%B4%BB%E9%A0%81%E7%B0%BF.html" title="next page">Ch05 活頁簿</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book Community<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="_static/js/index.d3f166471bb80abb5163.js"></script>
+
+
+    
+  </body>
+</html>
